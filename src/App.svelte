@@ -97,9 +97,73 @@
                 <img id="img_pc" src={pc_colec[i]} width=500 alt="nopcs">
             </div>
             <button on:click={handleButtonClickWithPhotocard}>Comprar</button>
-            <div id="contenedor2"></div>
-           
+            <div id="contenedor2"></div>           
         </div>
+    </div>
+    <div class="story">
+      {#if progress < 1}
+      <DebugScroller
+        index={index}
+        count={count}
+        offset={offset}
+        progress={progress}
+        />
+      {/if}
+      <Scroller
+        top={top}
+        threshold={threshold}
+        bottom={bottom}
+        bind:count={count}
+        bind:index={index}
+        bind:offset={offset}
+        bind:progress={progress}
+      >
+      <div slot="ce">
+        <p> hola</p>
+      </div>
+      <div slot="foreground" class="foreground_container">
+        <section class="step_foreground">
+          <div class="epi_foreground">
+            <!-- <h3>Seccion {index + 1}</h3> -->
+            <p>Compra un album</p>
+          </div>
+        </section>
+      </div>
+      </Scroller>
+
+    <Scroller
+      top={top2}
+      threshold={threshold2}
+      bottom={bottom2}
+      bind:count={count2}
+      bind:index={index2}
+      bind:offset={offset2}
+      bind:progress={progress2}
+      >
+      <div slot="background" class="image_container">
+        <img src="/images/{charts_ventas[index2]}" width=600px alt="chart {index2}" class="charts"/>
+      </div>
+      <div slot="foreground" class="foreground_container">
+        <section class="step_foreground">
+          <div class="epi_foreground">
+            <h3>Seccion {index2 + 1}</h3>
+            <p>Gráfico 1</p>
+          </div>
+        </section>
+        <section class="step_foreground">
+          <div class="epi_foreground">
+            <h3>Seccion {index2 + 1}</h3>
+            <p>Gráfico 1</p>
+          </div>
+        </section>
+        <section class="step_foreground">
+          <div class="epi_foreground">
+            <h3>Seccion {index2 + 1}</h3>
+            <p>Gráfico 1</p>
+          </div>
+        </section>
+      </div>
+    </Scroller>
     </div>
 
 
@@ -155,13 +219,13 @@
     }
 }
 
-  /* Estilos para el scroller
+  /* Estilos para el scroller */
   .foreground_container {
     pointer-events: none;
     padding-left: 50%;
-  } -->
+  }
 
-  <!-- .step_foreground {
+  .step_foreground {
     display: flex;
     justify-content: end;
     align-items: center;
@@ -170,20 +234,20 @@
     color: white;
     padding: 1em;
     margin: 0 0 2em 0;
-  } -->
-  <!-- .epi_foreground {
+  } 
+  .epi_foreground {
     padding: 20px;
     max-width: 150px;
     background-color: rgba(0, 0, 0, 0.5);
-  } --> */
+  }
   .lorem_ipsum {
     margin: 100px auto;
     max-width: 740px;
   }
   .image_container {
     display: flex;
-    justify-content: center;
+    justify-content: start;
     align-items: center;
-    height: 100vh;
+    height: 600px;
   }
 </style>
