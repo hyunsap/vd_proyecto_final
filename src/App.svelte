@@ -72,14 +72,15 @@
 
 <main>
     <div class="header">
-      <img src="/images/Group 2.png" width="200" alt="pcs_template" />
+      <!-- <img src="/images/Group 2.png" width="200" alt="pcs_template" />
       <h3 class="headline">
         <b>El nuevo gigante de la industria musical: </b>
         kpop supera en ventas físicas al resto de los géneros
       </h3>
-      <p class="bajada">Explorando el efecto del consumismo fan en las ventas de álbumes</p>
+      <p class="bajada">Explorando el efecto del consumismo fan en las ventas de álbumes</p> -->
+      <img src="/images/Thumbnail.png" width="100%" alt="portada" >
       <div class="lorem_ipsum">
-        <Loremipsum />
+        <p>En un contexto mundial de dominancia del streaming respecto a otros formatos de consumo musical, las ventas de discos se encuentran en bajada. Pero, sorprendentemente, hay un segmento de la industria dónde se están observando diferentes resultados. Con su particular modelo de ventas y diseño de productos, el kpop representa un fenómeno único en la escena musical actual. </p>
       </div>
     </div>
 
@@ -102,12 +103,12 @@
     </div>
     <div class="story">
       {#if progress < 1}
-      <DebugScroller
+      <!-- <DebugScroller
         index={index}
         count={count}
         offset={offset}
         progress={progress}
-        />
+        /> -->
       {/if}
       <Scroller
         top={top}
@@ -202,9 +203,8 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    margin-top: 50px;
-    margin-bottom: 80px;
   }
+
   .headline {
     font-size: 30px;
     line-height: 1.2;
@@ -222,7 +222,7 @@
     display: block;
   }
 
-  #contenedor {
+  #contenedor, #contenedor2 {
     position: relative;
     display: inline-block;
 }
