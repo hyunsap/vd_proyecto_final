@@ -29,7 +29,7 @@
 
     /* Charts */
     let charts_ventas = {
-        0: "/images/albumes_ventas_nopcs.png",
+        0: "images/albumes_ventas_nopcs.png",
         1: "/images/albumes_ventas_pcs.png",
         2: "/images/albumes_ventas_ww_sk.png",
     }
@@ -56,7 +56,9 @@
         textoAnimado.className = "animated-text";
         textoAnimado.textContent = "-$30 + 1 photocard";
 
-        i=i+1;
+      
+
+        i=(i+1) % pc_colec.length;
 
         const contenedor = document.getElementById("contenedor2");
         contenedor.appendChild(textoAnimado);
@@ -72,29 +74,25 @@
 
 <main>
     <div class="header">
-      <!-- <img src="/images/Group 2.png" width="200" alt="pcs_template" />
-      <h3 class="headline">
-        <b>El nuevo gigante de la industria musical: </b>
-        kpop supera en ventas físicas al resto de los géneros
-      </h3>
-      <p class="bajada">Explorando el efecto del consumismo fan en las ventas de álbumes</p> -->
       <img src="/images/Thumbnail.png" width="100%" alt="portada" >
-      <div class="lorem_ipsum">
+    </div>
+    <div class="content">
+      <div class="bajada">
         <p>En un contexto mundial de dominancia del streaming respecto a otros formatos de consumo musical, las ventas de discos se encuentran en bajada. Pero, sorprendentemente, hay un segmento de la industria dónde se están observando diferentes resultados. Con su particular modelo de ventas y diseño de productos, el kpop representa un fenómeno único en la escena musical actual. </p>
       </div>
-    </div>
+    
 
     <div class="gamification_portion">
         <div class="album_no_pcs">
             <p>Compra tantos álbumes como quieras</p>
-            <img src="/images/1989_taylor.png" width=400 alt="ts">
+            <img src="/images/1989_taylor.png" width=350 alt="ts">
             <button on:click={handleButtonClick}>Comprar</button>
             <div id="contenedor"></div>
         </div>
         <div class="album_pcs">
             <p>Nuevamente, compra tantos álbumes como quieras</p>
             <div class="cero_pcs" style="display:flex; align-items: center; column-gap: 250px">
-                <img src="/images/newjeans.png" width=300 alt="nwjns">
+                <img src="/images/newjeans2.png" width=400 alt="nwjns">
                 <img id="img_pc" src={pc_colec[i]} width=500 alt="nopcs">
             </div>
             <button on:click={handleButtonClickWithPhotocard}>Comprar</button>
@@ -110,7 +108,7 @@
         progress={progress}
         /> -->
       {/if}
-      <Scroller
+      <!-- <Scroller
         top={top}
         threshold={threshold}
         bottom={bottom}
@@ -126,7 +124,7 @@
           </div>
         </section>
       </div>
-      </Scroller>
+      </Scroller> -->
 
     <Scroller
       top={top2}
@@ -138,7 +136,7 @@
       bind:progress={progress2}
       >
       <div slot="background" class="image_container">
-        <img src={charts_ventas[index2]} width=600px alt="chart {index2}" class="charts"/>
+        <img src={charts_ventas[index2]} width="500px" alt="charts_ventas">
       </div>
       <div slot="foreground" class="foreground_container">
         <section class="step_foreground">
@@ -193,6 +191,7 @@
       <img src={chart_tendencia_ventas} alt="ventasxpcs" width=500/>
     </div>
     </div>
+  </div>
 
 
 </main>
@@ -205,18 +204,30 @@
     flex-direction: column;
   }
 
-  .headline {
+  .content{
+    margin:100px;
+    margin-bottom:0px;
+    font-family: "Lato";
+    font-size: 20px;
+    color:rgb(105, 103, 103);
+  }
+
+  /* .headline {
     font-size: 30px;
     line-height: 1.2;
     font-weight: normal;
     text-align: center;
     margin: 20px;
-  }
+  } */
   .bajada {
-    font-size: 18px;
+    font-family: "Lato";
+    font-size: 25px;
     font-weight: normal;
     text-align: center;
-    margin: 10px;
+    color: rgb(105, 103, 103);
+    margin-bottom: 100px;
+    margin-top: -50px;
+
   }
   .headline b {
     display: block;
@@ -257,20 +268,18 @@
     justify-content: end;
     align-items: center;
     height: 100vh;
-    border: 1px solid rgba(0, 0, 0, 0.4);
+    /* border: 1px solid rgba(0, 0, 0, 0.4); */
     color: white;
     padding: 1em;
     margin: 0 0 2em 0;
   } 
   .epi_foreground {
     padding: 20px;
-    max-width: 150px;
-    background-color: rgba(0, 0, 0, 0.5);
+    max-width: 500px;
+    background-color: #738CCC;
+    /* border-radius: 20px; */
   }
-  .lorem_ipsum {
-    margin: 100px auto;
-    max-width: 740px;
-  }
+
   .image_container {
     display: flex;
     justify-content: start;
