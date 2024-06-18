@@ -109,23 +109,6 @@
         progress={progress}
         /> -->
       {/if}
-      <!-- <Scroller
-        top={top}
-        threshold={threshold}
-        bottom={bottom}
-        bind:count={count}
-        bind:index={index}
-        bind:offset={offset}
-        bind:progress={progress}
-      >
-      <div slot="foreground" class="foreground_container">
-        <section class="step_foreground">
-          <div class="epi_foreground">
-            <h3>Seccion {index + 1}</h3>
-          </div>
-        </section>
-      </div>
-      </Scroller> -->
 
     <Scroller
       top={top2}
