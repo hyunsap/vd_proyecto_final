@@ -85,18 +85,23 @@
     <div class="gamification_portion">
         <div class="album_no_pcs">
             <p>Para contemplar la diferencia entre la experiencia a nivel comprador entre comprar un álbum proveniente de la industria musical occidental y comprar un álbum de kpop, se propone participar en el siguiente juego. Es meramente una experiencia lúdica, sin ningún tipo de impacto en la realidad.</p>
+            <br>
             <p>Tenés la posibilidad de comprar el álbum de Taylor Swift 1989. Compra tantos álbumes como quieras</p>
-            <img src="/images/1989_taylor.png" width=350 alt="ts">
-            <button on:click={handleButtonClick}>Comprar</button>
+            <img src="/images/1989_taylor.png" width=350px margin-top=10px alt="ts">
+            <br>
+            <img src="/images/boton.png" class="botonImagen" alt="boton" on:click={handleButtonClick}>
+            <!-- <button on:click={handleButtonClick}>Comprar</button> -->
             <div id="contenedor"></div>
         </div>
+        <br>
+        <br>
         <div class="album_pcs">
             <p>Ahora, tenés la posibilidad de comprar el álbum de NewJeans Get Up. Nuevamente, compra tantos álbumes como quieras</p>
             <div class="cero_pcs" style="display:flex; align-items: center; column-gap: 250px">
                 <img src="/images/newjeans2.png" width=400 alt="nwjns">
                 <img id="img_pc" src={pc_colec[i]} width=500 alt="nopcs">
             </div>
-            <button on:click={handleButtonClickWithPhotocard}>Comprar</button>
+            <img src="/images/boton.png" class="botonImagen" alt="boton" on:click={handleButtonClickWithPhotocard}>
             <div id="contenedor2"></div>           
         </div>
     </div>
@@ -197,10 +202,13 @@
   }
 
   .highlight{
-    color: #CAB032;
+    color: #EACB00;
     font-weight: bold;
   }
 
+  .botonImagen{
+    cursor:pointer;
+  }
   /* .headline {
     font-size: 30px;
     line-height: 1.2;
