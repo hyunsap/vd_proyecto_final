@@ -74,23 +74,24 @@
 
 <main>
     <div class="header">
-      <img src="/images/Thumbnail.png" width="100%" alt="portada" >
+      <img src="/images/florcitas.png" width="100%" alt="portada" >
     </div>
     <div class="content">
       <div class="bajada">
-        <p>En un contexto mundial de dominancia del streaming respecto a otros formatos de consumo musical, las ventas de discos se encuentran en bajada. Pero, sorprendentemente, hay un segmento de la industria dónde se están observando diferentes resultados. Con su particular modelo de ventas y diseño de productos, el kpop representa un fenómeno único en la escena musical actual. </p>
+        <p>En un contexto mundial de dominancia del streaming respecto a otros formatos de consumo musical, las ventas de discos se encuentran en bajada. Pero, sorprendentemente, hay un segmento de la industria dónde se están observando diferentes resultados. Con su particular <span class="highlight">modelo de ventas</span> y <span class="highlight">diseño de productos</span>, el kpop representa un fenómeno único en la escena musical actual. </p>
       </div>
     
 
     <div class="gamification_portion">
         <div class="album_no_pcs">
-            <p>Compra tantos álbumes como quieras</p>
+            <p>Para contemplar la diferencia entre la experiencia a nivel comprador entre comprar un álbum proveniente de la industria musical occidental y comprar un álbum de kpop, se propone participar en el siguiente juego. Es meramente una experiencia lúdica, sin ningún tipo de impacto en la realidad.</p>
+            <p>Tenés la posibilidad de comprar el álbum de Taylor Swift 1989. Compra tantos álbumes como quieras</p>
             <img src="/images/1989_taylor.png" width=350 alt="ts">
             <button on:click={handleButtonClick}>Comprar</button>
             <div id="contenedor"></div>
         </div>
         <div class="album_pcs">
-            <p>Nuevamente, compra tantos álbumes como quieras</p>
+            <p>Ahora, tenés la posibilidad de comprar el álbum de NewJeans Get Up. Nuevamente, compra tantos álbumes como quieras</p>
             <div class="cero_pcs" style="display:flex; align-items: center; column-gap: 250px">
                 <img src="/images/newjeans2.png" width=400 alt="nwjns">
                 <img id="img_pc" src={pc_colec[i]} width=500 alt="nopcs">
@@ -210,6 +211,11 @@
     font-family: "Lato";
     font-size: 20px;
     color:rgb(105, 103, 103);
+  }
+
+  .highlight{
+    color: #CAB032;
+    font-weight: bold;
   }
 
   /* .headline {
