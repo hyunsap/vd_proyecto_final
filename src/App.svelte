@@ -3,7 +3,8 @@
     import {onMount} from "svelte"
     import * as d3 from "d3"
     import DebugScroller from "./components/DebugScroller.svelte"
-    import Loremipsum from "./components/Loremipsum.svelte"
+    // import Chart from "./components/charts.svelte"
+    // import Charts from "./components/charts.svelte";
 
     /* Variables para el scroller1 */
     let count
@@ -20,18 +21,43 @@
     let offset2
     let progress2
     let top2 = 0.1
-    let threshold2 = 0.5
-    let bottom2 = 0.9
-
+    let threshold2 = 0.1
+    let bottom2 = 0.1
+    
     /*Imagen cambiante pcs*/
     let pc_colec = ["images/pcs0.png", "images/pcs1.png", "images/pcs2.png", "images/pcs3.png", "images/pcs4.png", "images/pcs5.png"]
     let i = 0
 
     /* Charts */
     let charts_ventas = {
-        0: "images/albumes_ventas_nopcs.png",
-        1: "/images/albumes_ventas_pcs.png",
-        2: "/images/albumes_ventas_ww_sk.png",
+        0: "images/falopeada2.png",
+        1: "/images/falopeada1.png",
+        2: "/images/falopeada3.png",
+        3: "/images/falopeada4.png"
+    }
+
+    let chart_top = {
+      0: "/images/prim2.png",
+      1: "/images/segun2.png",
+      2:"/images/ter2.png",
+      3:"/images/cuar2.png",
+      4:"/images/quinto2.png", 
+      5:"/images/sext2.png",
+      6:"/images/sept2.png",
+      7:"/images/oct2.png",
+      8:"/images/nov2.png",
+      9:"/images/dec2.png",
+      10:"/images/once2.png",
+      11:"/images/doce2.png",
+      12:"/images/trece2.png",
+      13:"/images/cator2.png",
+      14:"/images/quince2.png",
+      15:"/images/dcseis2.png",
+      16:"/images/dcsiet2.png",
+      17:"/images/dcocho2.png",
+      18:"/images/dcnuev2.png",
+      19:"/images/veinte2.png",
+      20:"/images/vntuno2.png",
     }
 
     let chart_tendencia_ventas = "/images/tendencia_ventas_punt_pcs.png"
@@ -106,56 +132,56 @@
         </div>
     </div>
     <div class="story">
-      {#if progress < 1}
-      <!-- <DebugScroller
-        index={index}
-        count={count}
-        offset={offset}
-        progress={progress}
-        /> -->
-      {/if}
 
-    <Scroller
-      top={top2}
-      threshold={threshold2}
-      bottom={bottom2}
-      bind:count={count2}
-      bind:index={index2}
-      bind:offset={offset2}
-      bind:progress={progress2}
+      <Scroller
+        top={top}
+        threshold={threshold}
+        bottom={bottom}
+        bind:count={count}
+        bind:index={index}
+        bind:offset={offset}
+        bind:progress={progress}
       >
-      <div slot="background" class="image_container">
-        <img src={charts_ventas[index2]} width="500px" alt="charts_ventas">
-      </div>
-      <div slot="foreground" class="foreground_container">
-        <section class="step_foreground">
-          <div class="epi_foreground">
-            <h3>¿Cómo se ve el mercado de ventas en música?</h3>
-            <p>Las ventas de álbumes occidentales en la última década presentan una baja
-              de ventas físicas gradual, en gran parte causada por la aparición de los 
-              servicios de streaming.
-            </p>
-          </div>
-        </section>
-        <section class="step_foreground">
-          <div class="epi_foreground">
-            <h3>¿Qué diferencia se encuentra en kpop?</h3>
-            <p>Por el contrario, las ventas en kpop cada año aumentan de manera exponencial,
-              ya que ofrecen una experiencia de consumidor más personalizada y llamativa.
-              Todo el diseño del álbum y sus inclusiones están pensados para la venta masiva.
-            </p>
-          </div>
-        </section>
-        <section class="step_foreground">
-          <div class="epi_foreground">
-            <h3>¿Cómo se afecta al mercado actual?</h3>
-            <p>Se ha llegado a un punto en el que la venta de álbumes de kpop ha superado
-               a los álbumes del resto de la industria musical, causando una especie de 
-               renacimiento del mercado musical físico</p>
-          </div>
-        </section>
-      </div>
-    </Scroller>
+        <div slot="background" class="image_container">
+          <!-- <div width="500px"><Chart1 /></div> -->
+          <img src={charts_ventas[index]} alt="charts_ventas">
+        </div>
+        <div slot="foreground" class="foreground_container">
+          <section class="step_foreground">
+            <div class="epi_foreground">
+              <h3>¿Cómo se ve el mercado de ventas en música?</h3>
+              <p>Las ventas de álbumes occidentales en la última década presentan una baja
+                de ventas físicas gradual, en gran parte causada por la aparición de los 
+                servicios de streaming.
+              </p>
+            </div>
+          </section>
+          <section class="step_foreground">
+            <div class="epi_foreground">
+              <h3>¿Qué diferencia se encuentra en kpop?</h3>
+              <p>Por el contrario, las ventas en kpop cada año aumentan de manera exponencial,
+                ya que ofrecen una experiencia de consumidor más personalizada y llamativa.
+                Todo el diseño del álbum y sus inclusiones están pensados para la venta masiva.
+              </p>
+            </div>
+          </section>
+          <section class="step_foreground">
+            <div class="epi_foreground">
+              <h3>¿Cómo se afecta al mercado actual?</h3>
+              <p>Se ha llegado a un punto en el que la venta de álbumes de kpop ha superado
+                a los álbumes del resto de la industria musical, causando una especie de 
+                renacimiento del mercado musical físico</p>
+            </div>
+          </section>
+          <section class="step_foreground">
+            <div class="epi_foreground">
+              <h3>Repuntada</h3>
+            </div>
+          </section>
+        </div>
+      </Scroller>
+    </div>
+     
     <div class="top20">
       <p>En el 2023 ha ocurrido un suceso histórico: 19 de los 20 álbumes mejores vendidos
          forman parte del género musical emergente desde hace ya varios años. 
@@ -177,10 +203,53 @@
         cantidad de ventas físicas de un álbum y la cantidad total de photocards 
         que pertenecen a la colección de dicho álbum.
       </p>
-      <img src={chart_tendencia_ventas} alt="ventasxpcs" width=500/>
     </div>
-    </div>
+  
+    <!-- Segundo scroller -->
+    <Scroller
+    top={top2}
+    threshold={threshold2}
+    bottom={bottom2}
+    bind:count={count2}
+    bind:index={index2}
+    bind:offset={offset2}
+    bind:progress={progress2}
+  >
+  <div slot="background">
+    <img src={chart_top[index2]} alt="dad">
   </div>
+  <div slot="foreground" class="foreground_container">
+    <section class="step_foreground"></section>
+    <section class="step_foreground">
+    </section>
+    <section class="step_foreground">
+    </section>
+    <section class="step_foreground">
+    </section>
+    <section class="step_foreground"></section>
+    <section class="step_foreground"></section>
+    <section class="step_foreground"></section>
+    <section class="step_foreground"></section>
+    <section class="step_foreground"></section>
+    <section class="step_foreground"></section>
+    <section class="step_foreground"></section>
+    <section class="step_foreground"></section>
+    <section class="step_foreground"></section>
+    <section class="step_foreground"></section>
+    <section class="step_foreground"></section>
+    <section class="step_foreground"></section>
+    <section class="step_foreground"></section>
+    <section class="step_foreground"></section>
+    <section class="step_foreground"></section>
+    <section class="step_foreground"></section>
+    <section class="step_foreground"></section>
+  </div>
+  </Scroller>
+    
+
+  
+  </div>
+    
 
 
 </main>
@@ -257,7 +326,7 @@
   /* Estilos para el scroller */
   .foreground_container {
     pointer-events: none;
-    padding-left: 50%;
+    padding-left: 60%;
   }
 
   .step_foreground {

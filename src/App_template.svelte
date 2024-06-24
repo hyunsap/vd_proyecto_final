@@ -5,7 +5,6 @@
 
   import Medallero from "./components/Medallero.svelte"
   import DebugScroller from "./components/DebugScroller.svelte"
-  import Loremipsum from "./components/Loremipsum.svelte"
 
   /* Variables para la data del medallero */
   let deportistas = []
