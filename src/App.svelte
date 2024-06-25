@@ -36,29 +36,16 @@
         3: "/images/falopeada4.png"
     }
 
-    let chart_top = {
-      0: "/images/prim2.png",
-      1: "/images/segun2.png",
-      2:"/images/ter2.png",
-      3:"/images/cuar2.png",
-      4:"/images/quinto2.png", 
-      5:"/images/sext2.png",
-      6:"/images/sept2.png",
-      7:"/images/oct2.png",
-      8:"/images/nov2.png",
-      9:"/images/dec2.png",
-      10:"/images/once2.png",
-      11:"/images/doce2.png",
-      12:"/images/trece2.png",
-      13:"/images/cator2.png",
-      14:"/images/quince2.png",
-      15:"/images/dcseis2.png",
-      16:"/images/dcsiet2.png",
-      17:"/images/dcocho2.png",
-      18:"/images/dcnuev2.png",
-      19:"/images/veinte2.png",
-      20:"/images/vntuno2.png",
-    }
+    let chart_top0 = {0: "/images/prim.png", 1: "/images/segun.png",2:"/images/ter.png",3:"/images/cuar.png",
+      4:"/images/quinto.png", 5:"/images/sext.png",6:"/images/sept.png",7:"/images/oct.png",8:"/images/nov.png",
+      9:"/images/dec.png",10:"/images/once.png",11:"/images/doce.png",12:"/images/trece.png",13:"/images/cator.png",
+      14:"/images/quince.png",15:"/images/dcseis.png",16:"/images/dcsiet.png",17:"/images/dcocho.png",18:"/images/dcnuev.png",
+      19:"/images/veinte.png",20:"/images/vntuno.png",}
+    let chart_top = {0: "/images/prim2.png",1:"/images/segun2.png",2:"/images/ter2.png",3:"/images/cuar2.png",
+      4:"/images/quinto2.png", 5:"/images/sext2.png",6:"/images/sept2.png",7:"/images/oct2.png",8:"/images/nov2.png",
+      9:"/images/dec2.png",10:"/images/once2.png",11:"/images/doce2.png",12:"/images/trece2.png",13:"/images/cator2.png",
+      14:"/images/quince2.png",15:"/images/dcseis2.png",16:"/images/dcsiet2.png",17:"/images/dcocho2.png",
+      18:"/images/dcnuev2.png",19:"/images/veinte2.png",20:"/images/vntuno2.png"}
 
     let chart_tendencia_ventas = "/images/tendencia_ventas_punt_pcs.png"
     let chart_ganancia_ventas = "/images/ganancia_ventas.png"
@@ -100,7 +87,7 @@
 
 <main>
     <div class="header">
-      <img src="/images/florcitas.png" width="100%" alt="portada" >
+      <img src="/images/florcitas2.png" width="100%" alt="portada" >
     </div>
     <div class="content">
       <div class="bajada">
@@ -131,7 +118,11 @@
             <div id="contenedor2"></div>           
         </div>
     </div>
+    <br><br>
     <div class="story">
+      <div class="container"><div class="pregunta">
+        <h3 class="lol">Y esto... ¿De qué sirve? ¿Para qué querría yo fotos de otra gente?</h3>
+      </div></div>
 
       <Scroller
         top={top}
@@ -169,19 +160,20 @@
             <div class="epi_foreground">
               <h3>¿Cómo se afecta al mercado actual?</h3>
               <p>Se ha llegado a un punto en el que la venta de álbumes de kpop ha superado
-                a los álbumes del resto de la industria musical, causando una especie de 
-                renacimiento del mercado musical físico</p>
+                a los álbumes del resto de la industria musical.</p>
             </div>
           </section>
           <section class="step_foreground">
             <div class="epi_foreground">
-              <h3>Repuntada</h3>
+              <h3>¿Cómo se afecta al mercado actual?</h3>
+              <p>De hecho, a partir de 2020 el mercado físico de álbumes experimenta una repuntada notable, 
+                en gran parte motivada por los álbumes de kpop.</p>
             </div>
           </section>
         </div>
       </Scroller>
     </div>
-     
+    <br><br>
     <div class="top20">
       <p>En el 2023 ha ocurrido un suceso histórico: 19 de los 20 álbumes mejores vendidos
          forman parte del género musical emergente desde hace ya varios años. 
@@ -268,6 +260,20 @@
     font-family: "Lato";
     font-size: 20px;
     color:rgb(105, 103, 103);
+  }
+  .container{
+    display: flex;
+    justify-content: center;
+  }
+  .pregunta{
+    display:flex;
+    background-color: #ff8dfb;
+    justify-content: center;
+    width: 600px;
+  }
+  .lol{
+    padding: 20px;
+    color: white;
   }
 
   .highlight{
