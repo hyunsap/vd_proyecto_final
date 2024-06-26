@@ -98,7 +98,8 @@
       <img src="/images/portada.png" width="100%" alt="portada" >
     </div>
     <div class="content">
-      <div class="container" style=" margin-bottom: 100px;"><div class="pregunta" style="display: flex; position:absolute;bottom: -260px;width: 780px; height: 40px; align-items: center; padding: 5px; font-family: Anybody; font-weight: bold; color: black;">Explorando el efecto del consumismo fan en la venta de discos físicos</div></div>
+      <!-- <div class="container" style=" margin-bottom: 100px;"><div class="pregunta" style="display: flex; position:absolute;bottom: -260px;width: 780px; height: 40px; align-items: center; padding: 5px; font-family: Anybody; font-weight: bold; color: black;">Explorando el efecto del consumismo fan en la venta de discos físicos</div></div> -->
+      <div class="container" style=" margin-bottom: 100px;"><div class="pregunta" style="display: flex;justify-content: center; position:absolute;bottom: -260px;width: 780px; height: 40px; align-items: center; padding: 5px; font-family: Anybody; font-weight: bold; color: black;">EXPLORANDO EL EFECTO DEL CONSUMISMO FAN<br>EN LA VENTA DE DISCOS FÍSICOS</div></div>
       <div class="bajada">
         <p>En un contexto mundial de dominancia del streaming respecto a otros formatos de consumo musical, las ventas de discos se encuentran en bajada. Pero, sorprendentemente, hay un segmento de la industria dónde se están observando diferentes resultados. <br><br>Con su particular <span class="highlight">modelo de ventas</span> y <span class="highlight">diseño de productos</span>, el kpop representa un fenómeno único en la escena musical actual. </p>
       </div>
