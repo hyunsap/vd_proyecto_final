@@ -191,12 +191,19 @@
         comunidad fan del kpop la práctica de comprar álbumes en cantidad con tal de 
         completar una colección de photocards, y luego descartar los discos repetidos. 
       </p>
-      <p>Se puede encontrar entonces una correlación muy fuerte entre 
-        cantidad de ventas físicas de un álbum y la cantidad total de photocards 
-        que pertenecen a la colección de dicho álbum.
-      </p>
     </div>
+      <div class="container">
+        <div class="pregunta">
+          <h3 class="lol">Top 20: álbumes más vendidos de 2023</h3>
+        </div>
+      </div>
+      <br>
+
+      <div>A partir de la lista de IFPI de los discos con mayores ventas físicas de 2023, se analiza el puntaje de un album, 
+        determinado a partir de las ventas físicas totales sobre la popularidad del álbum, y su correlación con la cantidad 
+        de photocards presentes, en particular cuántos álbumes habría que comprar para completar la colección si no hubiera repeticiones.</div>
   
+    <br><br>
     <!-- Segundo scroller -->
     <Scroller
     top={top2}
@@ -208,35 +215,37 @@
     bind:progress={progress2}
   >
   <div slot="background">
-    <img src={chart_top[index2]} alt="dad">
+    <img src={chart_top[index2]} alt="dad" width=500px>
   </div>
   <div slot="foreground" class="foreground_container">
-    <section class="step_foreground"></section>
-    <section class="step_foreground">
-    </section>
-    <section class="step_foreground">
-    </section>
-    <section class="step_foreground">
-    </section>
-    <section class="step_foreground"></section>
-    <section class="step_foreground"></section>
-    <section class="step_foreground"></section>
-    <section class="step_foreground"></section>
-    <section class="step_foreground"></section>
-    <section class="step_foreground"></section>
-    <section class="step_foreground"></section>
-    <section class="step_foreground"></section>
-    <section class="step_foreground"></section>
-    <section class="step_foreground"></section>
-    <section class="step_foreground"></section>
-    <section class="step_foreground"></section>
-    <section class="step_foreground"></section>
-    <section class="step_foreground"></section>
-    <section class="step_foreground"></section>
-    <section class="step_foreground"></section>
-    <section class="step_foreground"></section>
+    <section class="step_foreground"><div class="epi_foreground">El disco físico más vendido de 2023: FML, de Seventeen. Cuenta con un total de 72 photocards, y cada álbum trae incluidas 2. Cuenta con una puntuación de 18, al tener 6.4 millones de copias vendidas sobre 360 millones de streams.</div></section>
+    <section class="step_foreground"><div class="epi_foreground">5-Star de Stray Kids cuenta con el segundo puesto. Con 5.3 millones de copias vendidas sobre 596 millones de streams, su puntuación es de 9 puntos.</div></section>
+    <section class="step_foreground"><div class="epi_foreground">En el tercer puesto se encuentra ISTJ de NCT Dream, el cual logró 4.5 millones de ventas.</div></section>
+    <section class="step_foreground"><div class="epi_foreground">Seventeen, con un segundo álbum, llega al cuarto lugar con 4.5 millones de ventas, con tan solo 119 millones de streams.</div></section>
+    <section class="step_foreground"><div class="epi_foreground">Stray Kids también vuelve a aparecer con Rockstar, álbum que contó con 4.2 millones de copias vendidas y 313 millones de streams.</div></section>
+    <section class="step_foreground"><div class="epi_foreground">El único álbum no perteneciente al kpop que se encuentra entre los 20 más vendidos: 1989 (Taylor's Version) de Taylor Swift. Siendo uno de los discos más populares de 2023, con 3 billones de reproducciones, se mete en el top con una puntuación relativamente baja.</div></section>
+    <section class="step_foreground"><div class="epi_foreground">Golden de Jungkook, perteneciente a BTS, también cuenta con un alto número de streams que ronda los 3 billones, y solamente un total de 4 photocards, con 2 en cada álbum. Se encuentra en el séptimo lugar con 2.7 millones de copias vendidas.</div></section>
+    <section class="step_foreground"><div class="epi_foreground">El octavo puesto pertenece a Exist de EXO, el cual contó con 2.3 millones de ventas y 134 millones de reproducciones. Contiene en total 24 photocards, y cada álbum solo trae 1 incluida.</div></section>
+    <section class="step_foreground"><div class="epi_foreground">El noveno puesto pertenece a I've Mine de IVE, el cual contó con 2.2 millones de ventas y 187 millones de reproducciones. Contiene en total 12 photocards, y cada álbum solo trae 1 incluida.</div></section>
+    <section class="step_foreground"><div class="epi_foreground">El déximo puesto pertenece a Layover de V, miembro de BTS, que con 1.3 billones de streams y 5 photocards de 15 incluidas alcanzó los 2.2 millones de ventas</div></section>
+    <section class="step_foreground"><div class="epi_foreground">En el puesto once se encuentra Youth in the Shade, el álbum debut de Zerobaseone, el cual contó con 2.1 millones de ventas. Impresionante número comparado con las 87 millones de reproducciones que obtuvo el álbum. La versión física incluye 1 photocard de 36.</div></section>
+    <section class="step_foreground"><div class="epi_foreground">El doceavo lugar pertenece a NewJeans, con el álbum Get Up, el cual casi alcanzó el billón de reproducciones y contó con 2.1 millones de ventas, conteniendo 5 photocards de 30 en cada disco.</div></section>
+    <section class="step_foreground"><div class="epi_foreground">En décimotercer puesto se encuentra aespa, cuyo álbum My World cónto con 239 millones de streams y 2.1 millones de ventas, con 1 photocard incluida de 8 totales. </div></section>
+    <section class="step_foreground"><div class="epi_foreground">El puesto catorce pertenece a TXT, con 2 millones de copias vendidas y 268 millones de streams, contando cada disco con 1 photocard de 15.</div></section>
+    <section class="step_foreground"><div class="epi_foreground">En el lugar 15, con 2 millones de ventas, se encuentra I Feel de (G)I-dle, el cual contó con 339 millones de streams y 1 photocard de 15 incluida</div></section>
+    <section class="step_foreground"><div class="epi_foreground">En el puesto 16 se encuentra Fact Check de NCT 127 con 1.9 millones de copias vendidas y 88 millones de streams. Cuenta con 1 photocard de 27 incluida. </div></section>
+    <section class="step_foreground"><div class="epi_foreground">El lugar 17 pertenece a Enhypen con Dark Blood, álbum muy popular con 400 millones de streams y 1.7 millones de ventas. Contiene 1 pc de 27. </div></section>
+    <section class="step_foreground"><div class="epi_foreground">Otro álbum de IVE, I've IVE, se encuentra en el puesto 18, con 1.7 millones de ventas y 479 millones de streams. Cuenta con 1 pc incluida de 18.</div></section>
+    <section class="step_foreground"><div class="epi_foreground">Otro miembro de BTS, Jimin, aparece en la lista en el penúltimo lugar con el álbum Face, con 1.7 millones de ventas frente a 1.8 billones de streams, contando con un puntaje bastante bajo. Trae 1 pc de 6 posibles.</div></section>
+    <section class="step_foreground"><div class="epi_foreground">Por último, nuevamente aparece Enhypen en la lista. Su disco Orange Blood cuenta con 1.7 millones de ventas y 147 millones de reproducciones. Cada álbum incluye 2 photocards de 28 totales.</div></section>
+    <section class="step_foreground"><div class="epi_foreground">Se presencia una tendencia de aumento de la puntuación mientras más discos comprados requiera conseguir todas las photocards.</div></section>
   </div>
   </Scroller>
+
+  <div class="corr"><p>Se puede encontrar entonces una correlación bastante fuerte entre 
+    cantidad de ventas físicas de un álbum y la cantidad total de photocards 
+    que pertenecen a la colección de dicho álbum.
+  </p></div>
     
 
   
