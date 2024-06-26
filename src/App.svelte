@@ -36,6 +36,14 @@
         3: "/images/falopeada4.png"
     }
 
+    let charts_ventas2 = {
+        0: "images/falopeada2_2.png",
+        1: "/images/falopeada1_2.png",
+        2: "/images/falopeada3.png",
+        3: "/images/falopeada4_2.png"
+
+    }
+
     let chart_top0 = {0: "/images/prim.png", 1: "/images/segun.png",2:"/images/ter.png",3:"/images/cuar.png",
       4:"/images/quinto.png", 5:"/images/sext.png",6:"/images/sept.png",7:"/images/oct.png",8:"/images/nov.png",
       9:"/images/dec.png",10:"/images/once.png",11:"/images/doce.png",12:"/images/trece.png",13:"/images/cator.png",
@@ -87,7 +95,7 @@
 
 <main>
     <div class="header">
-      <img src="/images/florcitas2.png" width="100%" alt="portada" >
+      <img src="/images/portada.png" width="100%" alt="portada" >
     </div>
     <div class="content">
       <div class="bajada">
@@ -109,9 +117,9 @@
         <br>
         <br>
         <div class="album_pcs">
-            <p>Ahora, tenés la posibilidad de comprar el álbum de NewJeans Get Up. Nuevamente, compra tantos álbumes como quieras</p>
+            <p>Ahora, tenés la posibilidad de comprar el álbum de NCT "Sticker". Nuevamente, compra tantos álbumes como quieras</p>
             <div class="cero_pcs" style="display:flex; align-items: center; column-gap: 250px">
-                <img src="/images/newjeans2.png" width=400 alt="nwjns">
+                <img src="/images/sticker.png" width=400 alt="nct">
                 <img id="img_pc" src={pc_colec[i]} width=500 alt="nopcs">
             </div>
             <img src="/images/boton.png" class="botonImagen" alt="boton" on:click={handleButtonClickWithPhotocard}>
@@ -135,7 +143,7 @@
       >
         <div slot="background" class="image_container">
           <!-- <div width="500px"><Chart1 /></div> -->
-          <img src={charts_ventas[index]} alt="charts_ventas">
+          <img src={charts_ventas2[index]} alt="charts_ventas">
         </div>
         <div slot="foreground" class="foreground_container">
           <section class="step_foreground">
@@ -215,7 +223,7 @@
     bind:progress={progress2}
   >
   <div slot="background">
-    <img src={chart_top[index2]} alt="dad" width=500px>
+    <img src={chart_top[index2]} alt="dad" width=680px>
   </div>
   <div slot="foreground" class="foreground_container">
     <section class="step_foreground"><div class="epi_foreground">El disco físico más vendido de 2023: FML, de Seventeen. Cuenta con un total de 72 photocards, y cada álbum trae incluidas 2. Cuenta con una puntuación de 18, al tener 6.4 millones de copias vendidas sobre 360 millones de streams.</div></section>
@@ -268,7 +276,7 @@
     margin-bottom:0px;
     font-family: "Lato";
     font-size: 20px;
-    color:rgb(105, 103, 103);
+    color:white;
   }
   .container{
     display: flex;
@@ -276,7 +284,7 @@
   }
   .pregunta{
     display:flex;
-    background-color: #ff8dfb;
+    background-color: #02D56D;
     justify-content: center;
     width: 600px;
   }
@@ -286,7 +294,7 @@
   }
 
   .highlight{
-    color: #EACB00;
+    color: #02D56D;
     font-weight: bold;
   }
 
@@ -305,7 +313,7 @@
     font-size: 25px;
     font-weight: normal;
     text-align: center;
-    color: rgb(105, 103, 103);
+    color: #6341fa;
     margin-bottom: 100px;
     margin-top: -50px;
 
@@ -357,7 +365,7 @@
   .epi_foreground {
     padding: 20px;
     max-width: 500px;
-    background-color: #738CCC;
+    background-color: #6341fa;
     /* border-radius: 20px; */
   }
 
