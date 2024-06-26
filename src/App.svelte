@@ -98,8 +98,9 @@
       <img src="/images/portada.png" width="100%" alt="portada" >
     </div>
     <div class="content">
+      <div class="container" style=" margin-bottom: 100px;"><div class="pregunta" style="display: flex; position:absolute;bottom: -260px;width: 780px; height: 40px; align-items: center; padding: 5px; font-family: Anybody; font-weight: bold; color: black;">Explorando el efecto del consumismo fan en la venta de discos físicos</div></div>
       <div class="bajada">
-        <p>En un contexto mundial de dominancia del streaming respecto a otros formatos de consumo musical, las ventas de discos se encuentran en bajada. Pero, sorprendentemente, hay un segmento de la industria dónde se están observando diferentes resultados. Con su particular <span class="highlight">modelo de ventas</span> y <span class="highlight">diseño de productos</span>, el kpop representa un fenómeno único en la escena musical actual. </p>
+        <p>En un contexto mundial de dominancia del streaming respecto a otros formatos de consumo musical, las ventas de discos se encuentran en bajada. Pero, sorprendentemente, hay un segmento de la industria dónde se están observando diferentes resultados. <br><br>Con su particular <span class="highlight">modelo de ventas</span> y <span class="highlight">diseño de productos</span>, el kpop representa un fenómeno único en la escena musical actual. </p>
       </div>
     
 
@@ -311,9 +312,9 @@
   .bajada {
     font-family: "Lato";
     font-size: 25px;
-    font-weight: normal;
+    font-weight: bold;
     text-align: center;
-    color: #6341fa;
+    color: #c384ff;
     margin-bottom: 100px;
     margin-top: -50px;
 
@@ -365,7 +366,7 @@
   .epi_foreground {
     padding: 20px;
     max-width: 500px;
-    background-color: #6341fa;
+    background-color: #1a1a1a;
     /* border-radius: 20px; */
   }
 
