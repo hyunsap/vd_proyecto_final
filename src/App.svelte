@@ -108,9 +108,10 @@
         <div class="album_no_pcs">
           <div class="container"><div class="juego" style="background-color: #1a1a1a; width: 800px"><h3 style="font-family: Anybody; font-weight: bold;text-align: center; color: #02D56D">EXPLOREMOS LA EXPERIENCIA ACTUAL DE COMPRAR UN ÁLBUM</h3></div></div>
             <br>
-            <div class="container"><div class="juego" style="background-color: #1a1a1a; width: 570px"><h3 style="font-family: Anybody;font-size: 18px; text-align: center; color: #ffffff">Tenés disponibles estas fichas, gastalas como quieras</h3></div></div>
+            <div class="container"><div class="juego" style="background-color: #1a1a1a; width: 570px"><h3 style="font-family: Anybody;font-size: 18px; text-align: center; color: #ffffff">Tenés disponibles estas fichas, canjealas por tantos álbumes como quieras</h3></div></div>
             <br>
-            <div class="ficha" style="display:flex; justify-content: center"><img src="images/fichas.png" width=80px></div>
+            <div class="ficha" style="display:flex; justify-content: center">
+              <img src="images/fichas.png" width=80px></div>
             <p>Tenés la posibilidad de comprar el álbum de Taylor Swift "1989 (Taylor's Version)". Compra tantos álbumes como quieras</p>
             <img src="/images/1989_taylor.png" width=350px margin-top=10px alt="ts">
             <br>
