@@ -98,7 +98,7 @@
       <img src="/images/portada.png" width="100%" alt="portada" >
     </div>
     <div class="content">
-      <div class="container" style=" margin-bottom: 100px;"><div class="pregunta" style="display: flex; position:absolute;bottom: -260px;width: 780px; height: 40px; align-items: center; padding: 5px; font-family: Anybody; font-weight: bold; color: black;">Explorando el efecto del consumismo fan en la venta de discos físicos</div></div>
+      <div class="container" style=" margin-bottom: 100px;"><div class="pregunta" style="display: flex; position:absolute;bottom: -260px;width: 760px; height: 38px; align-items: center; padding: 5px; font-family: Anybody; color: black;">EXPLORANDO EL EFECTO DEL CONSUMISMO FAN EN LA VENTA DE DISCOS FÍSICOS</div></div>
       <div class="bajada">
         <p>En un contexto mundial de dominancia del streaming respecto a otros formatos de consumo musical, las ventas de discos se encuentran en bajada. Pero, sorprendentemente, hay un segmento de la industria dónde se están observando diferentes resultados. <br><br>Con su particular <span class="highlight">modelo de ventas</span> y <span class="highlight">diseño de productos</span>, el kpop representa un fenómeno único en la escena musical actual. </p>
       </div>
@@ -106,31 +106,39 @@
 
     <div class="gamification_portion">
         <div class="album_no_pcs">
-            <p>Para contemplar la diferencia entre la experiencia a nivel comprador entre comprar un álbum proveniente de la industria musical occidental y comprar un álbum de kpop, se propone participar en el siguiente juego. Es meramente una experiencia lúdica, sin ningún tipo de impacto en la realidad.</p>
+          <div class="container"><div class="juego" style="background-color: #1a1a1a; width: 800px"><h3 style="font-family: Anybody; font-weight: bold;text-align: center; color: #02D56D">EXPLOREMOS LA EXPERIENCIA ACTUAL DE COMPRAR UN ÁLBUM</h3></div></div>
             <br>
-            <p>Tenés la posibilidad de comprar el álbum de Taylor Swift 1989. Compra tantos álbumes como quieras</p>
+            <div class="container"><div class="juego" style="background-color: #1a1a1a; width: 570px"><h3 style="font-family: Anybody;font-size: 18px; text-align: center; color: #ffffff">Tenés disponibles estas fichas, gastalas como quieras</h3></div></div>
+            <br>
+            <div class="ficha" style="display:flex; justify-content: center"><img src="images/fichas.png" width=80px></div>
+            <p>Tenés la posibilidad de comprar el álbum de Taylor Swift "1989 (Taylor's Version)". Compra tantos álbumes como quieras</p>
             <img src="/images/1989_taylor.png" width=350px margin-top=10px alt="ts">
             <br>
-            <img src="/images/boton.png" class="botonImagen" alt="boton" on:click={handleButtonClick}>
+            <img src="/images/boton_compra.png" class="botonImagen" alt="boton" on:click={handleButtonClick}>
             <!-- <button on:click={handleButtonClick}>Comprar</button> -->
+            <br>
+            <div class="container"><div class="juego" style="background-color: #1a1a1a; width: 570px"><h3 style="font-family: Anybody;font-size: 18px; text-align: center; color: #02D56D">Cuando termines, scrollea a la siguiente sección</h3></div></div>
             <div id="contenedor"></div>
         </div>
         <br>
         <br>
         <div class="album_pcs">
-            <p>Ahora, tenés la posibilidad de comprar el álbum de NCT "Sticker". Nuevamente, compra tantos álbumes como quieras</p>
+          <div class="container"><div class="juego" style="background-color: #1a1a1a; width: 700px"><h3 style="font-family: Anybody;font-size: 18px; text-align: center; color: #ffffff">En caso de que te hayas gastado todas las fichas, se te reinician</h3></div></div>
+          <div class="container"><div class="juego" style="margin-top: 50px;background-color: #1a1a1a; width: 700px"><h3 style="font-family: Anybody;font-size: 18px; text-align: center; color: #ffffff">Ahora el álbum es de kpop. Nuevamente, comprá cuantos quieras</h3></div></div>
+
+            <p>Tenés la posibilidad de comprar el álbum de NCT "Sticker". Compra tantos álbumes como quieras</p>
             <div class="cero_pcs" style="display:flex; align-items: center; column-gap: 250px">
                 <img src="/images/sticker.png" width=400 alt="nct">
                 <img id="img_pc" src={pc_colec[i]} width=500 alt="nopcs">
             </div>
-            <img src="/images/boton.png" class="botonImagen" alt="boton" on:click={handleButtonClickWithPhotocard}>
+            <img src="/images/boton_compra.png" class="botonImagen" alt="boton" on:click={handleButtonClickWithPhotocard}>
             <div id="contenedor2"></div>           
         </div>
     </div>
     <br><br>
     <div class="story">
-      <div class="container"><div class="pregunta">
-        <h3 class="lol">Y esto... ¿De qué sirve? ¿Para qué querría yo fotos de otra gente?</h3>
+      <div class="container"><div class="pregunta2" style="display:flex; background-color: #1c10f6; height:80px; align-items:center">
+        <h3 class="lol" style="color: white; font-family: Anybody">Y esto... ¿De qué sirve? ¿Para qué querría yo fotos de otra gente?</h3>
       </div></div>
 
       <Scroller
@@ -201,8 +209,9 @@
         completar una colección de photocards, y luego descartar los discos repetidos. 
       </p>
     </div>
+    <br>
       <div class="container">
-        <div class="pregunta">
+        <div class="pregunta" style="height:80px; align-items:center">
           <h3 class="lol">Top 20: álbumes más vendidos de 2023</h3>
         </div>
       </div>
@@ -226,7 +235,7 @@
   <div slot="background">
     <img src={chart_top[index2]} alt="dad" width=680px>
   </div>
-  <div slot="foreground" class="foreground_container">
+  <div slot="foreground" class="foreground_container2">
     <section class="step_foreground"><div class="epi_foreground">El disco físico más vendido de 2023: FML, de Seventeen. Cuenta con un total de 72 photocards, y cada álbum trae incluidas 2. Cuenta con una puntuación de 18, al tener 6.4 millones de copias vendidas sobre 360 millones de streams.</div></section>
     <section class="step_foreground"><div class="epi_foreground">5-Star de Stray Kids cuenta con el segundo puesto. Con 5.3 millones de copias vendidas sobre 596 millones de streams, su puntuación es de 9 puntos.</div></section>
     <section class="step_foreground"><div class="epi_foreground">En el tercer puesto se encuentra ISTJ de NCT Dream, el cual logró 4.5 millones de ventas.</div></section>
@@ -287,11 +296,11 @@
     display:flex;
     background-color: #02D56D;
     justify-content: center;
-    width: 600px;
-  }
+   }
   .lol{
     padding: 20px;
-    color: white;
+    color: black;
+    text-align: center;
   }
 
   .highlight{
@@ -350,8 +359,13 @@
   /* Estilos para el scroller */
   .foreground_container {
     pointer-events: none;
+    padding-left: 50%;
+  }
+  .foreground_container2 {
+    pointer-events: none;
     padding-left: 60%;
   }
+
 
   .step_foreground {
     display: flex;
