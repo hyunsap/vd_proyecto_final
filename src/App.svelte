@@ -338,13 +338,7 @@
     display: inline-block;
 }
 
-  .animated-text {
-    position: absolute;
-    color: red;
-    font-size: 40px;
-    font-weight: bold;
-    animation: fadeOutMoveUp 1s forwards;
-  }
+
 
 @keyframes fadeOutMoveUp {
     0% {

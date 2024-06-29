@@ -72,6 +72,16 @@ button:focus-visible {
   outline: 4px auto -webkit-focus-ring-color;
 }
 
+
+.animated-text {
+  position: absolute;
+  color: red;
+  font-size: 40px;
+  font-weight: bold;
+  animation: fadeOutMoveUp 1s forwards;
+}
+
+
 @media (prefers-color-scheme: light) {
   :root {
     color: #213547;
