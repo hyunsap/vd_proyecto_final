@@ -96,7 +96,7 @@
 <main>
 
     <div class="header">
-      <img src="/images/Portada.png" width="100%" alt="portada" >
+      <img src="/images/portada.png" width="100%" alt="portada" >
       <img src="/images/noeasy-cd.png" id='cd' alt="cd">
     </div>
 
@@ -108,28 +108,43 @@
         <div class="imp-amarillo"><h3>EXPLOREMOS LA EXPERIENCIA ACTUAL DE COMPRAR UN ALBUM</h3></div>
         <img src="/images/botones/flechas.svg" class="up-down" width=30px alt="flechas">
       </div>
-
+      <!-- <br><br><br><br><br> -->
+      <div class="espacio" style="height:200px"></div>
     <div class="gamification_portion">
+      <img src="public/images/botones/disclaimer.png" alt="advert">
+      <img src="public/images/botones/disclaimer2.png" alt="advert2" style="display: flex; position: relative; bottom: 450px">      
+
         <div class="album_no_pcs">
-          <div class="container"><div class="juego" style="background-color: #1a1a1a; width: 800px"><h3 style="font-family: Anybody; font-weight: bold;text-align: center; color: #02D56D">EXPLOREMOS LA EXPERIENCIA ACTUAL DE COMPRAR UN ÁLBUM</h3></div></div>
+
             <br>
-            <div class="container"><div class="juego" style="background-color: #1a1a1a; width: 570px"><h3 style="font-family: Anybody;font-size: 18px; text-align: center; color: #ffffff">Tenés disponibles estas fichas, canjealas por tantos álbumes como quieras</h3></div></div>
-            <br>
+            <div class="container"><div class="juego" style="width: 800px"><h3 style="font-family: Lato;font-size: 20px; text-align: center; color: #ffffff">Vamos a jugar un juego<br>
+              Tenes disponibles 100.000 fichas, podes canjearlas como quieras</h3></div></div>
             <div class="ficha" style="display:flex; justify-content: center">
-              <img src="images/botones/fichas.png" width=80px alt="ficha"></div>
-            <p>Tenés la posibilidad de comprar el álbum de Taylor Swift "1989 (Taylor's Version)". Compra tantos álbumes como quieras</p>
-            <img src="/images/albums/1989_taylor.png" width=250px margin-top=10px alt="ts">
+              <img src="images/botones/fichas.png" width=200px alt="ficha"></div>
+            <div class="container"><div class="juego" style="width: 800px"><h3 style="font-family: Lato;font-size: 20px; text-align: center; color: #ffffff">
+              La única regla es que en cada sección solo podes comprar los álbumes que te alcancen, cuando se te acaben las fichas vas a tener que seguir scrolleando.</h3></div>
+            </div>
+            <div class="espacio" style="height:200px"></div>
+
+            
+            <p>Tenés la posibilidad de comprar el álbum de Taylor Swift "1989 (Taylor's Version)". <br>Compra tantos álbumes como quieras</p>
+            <img src="/images/albums/1989_taylor.png" width=300px margin-top=10px alt="ts">
             <br>
-            <img src="/images/boton_compra.png" class="botonImagen" alt="boton" on:click={handleButtonClick}>
-            <!-- <button on:click={handleButtonClick}>Comprar</button> -->
-            <br>
-            <div class="container"><div class="juego" style="background-color: #1a1a1a; width: 570px"><h3 style="font-family: Anybody;font-size: 18px; text-align: center; color: #02D56D">Cuando termines, scrollea a la siguiente sección</h3></div></div>
-            <div id="contenedor"></div>
+            <img src="/images/botones/boton_canjear.png" width=120px class="botonImagen" alt="boton" on:click={handleButtonClick}>
+            <br><br><br><br>
+            <!-- <div class="container"><div class="juego" style="background-color: #1a1a1a; width: 570px"><h3 style="font-family: Anybody;font-size: 18px; text-align: center; color: #ffffff">Cuando termines, scrollea a la siguiente sección</h3></div></div> -->
+            <div class="imp-amarillo"><h3>CUANDO TERMINES SCROLLEA A LA SIGUIENTE SECCIÓN</h3></div>
         </div>
         <br>
         <br>
+        <div class="reinicio" style="display: flex; flex-direction:column; height: 1200px; justify-content: center; align-items: center">
+          <div class="reinicio2" style="width: 800px">
+            <h3>En caso de que te hayas gastado todas las fichas, se reinician, <br>volvés a tener 100.000 fichas disponibles para canjear</h3>
+          </div>
+          <img src="images/botones/fichas.png" width=200px alt="ficha">        
+        </div>
+        
         <div class="album_pcs">
-          <div class="container"><div class="juego" style="background-color: #1a1a1a; width: 700px"><h3 style="font-family: Anybody;font-size: 18px; text-align: center; color: #ffffff">En caso de que te hayas gastado todas las fichas, se te reinician</h3></div></div>
           <div class="container"><div class="juego" style="margin-top: 50px;background-color: #1a1a1a; width: 700px"><h3 style="font-family: Anybody;font-size: 18px; text-align: center; color: #ffffff">Ahora el álbum es de kpop. Nuevamente, comprá cuantos quieras</h3></div></div>
 
             <p>Tenés la posibilidad de comprar el álbum de NCT "Sticker". Compra tantos álbumes como quieras</p>
@@ -307,6 +322,7 @@
   .container{
     display: flex;
     justify-content: center;
+    margin: 50px;
   }
   .pregunta{
     display:flex;
