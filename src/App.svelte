@@ -118,7 +118,7 @@
             <div class="ficha" style="display:flex; justify-content: center">
               <img src="images/botones/fichas.png" width=80px alt="ficha"></div>
             <p>Tenés la posibilidad de comprar el álbum de Taylor Swift "1989 (Taylor's Version)". Compra tantos álbumes como quieras</p>
-            <img src="/images/albums/1989_taylor.png" width=350px margin-top=10px alt="ts">
+            <img src="/images/albums/1989_taylor.png" width=250px margin-top=10px alt="ts">
             <br>
             <img src="/images/boton_compra.png" class="botonImagen" alt="boton" on:click={handleButtonClick}>
             <!-- <button on:click={handleButtonClick}>Comprar</button> -->
@@ -133,8 +133,8 @@
           <div class="container"><div class="juego" style="margin-top: 50px;background-color: #1a1a1a; width: 700px"><h3 style="font-family: Anybody;font-size: 18px; text-align: center; color: #ffffff">Ahora el álbum es de kpop. Nuevamente, comprá cuantos quieras</h3></div></div>
 
             <p>Tenés la posibilidad de comprar el álbum de NCT "Sticker". Compra tantos álbumes como quieras</p>
-            <div class="cero_pcs" style="display:flex; align-items: center; column-gap: 250px">
-                <img src="/images/albums/sticker.png" width=400 alt="nct">
+            <div class="cero_pcs" style="display:flex; align-items: center; column-gap: 50px">
+                <img src="/images/albums/rockstar.png" width=300 alt="skz">
                 <img id="img_pc" src={pc_colec[i]} width=500 alt="nopcs">
             </div>
             <img src="/images/boton_compra.png" class="botonImagen" alt="boton" on:click={handleButtonClickWithPhotocard}>
