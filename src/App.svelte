@@ -25,7 +25,7 @@
     let bottom2 = 0.1
     
     /*Imagen cambiante pcs*/
-    let pc_colec = ["images/pcs0.png", "images/pcs1.png", "images/pcs2.png", "images/pcs3.png", "images/pcs4.png", "images/pcs5.png"]
+    let pc_colec = ["images/pcs/pcs0.png", "images/pcs/pcs1.png", "images/pcs/pcs2.png", "images/pcs/pcs3.png", "images/pcs/pcs4.png", "images/pcs/pcs5.png"]
     let i = 0
 
     /* Charts */
@@ -94,15 +94,20 @@
 </script>
 
 <main>
+
     <div class="header">
-      <img src="/images/portada.png" width="100%" alt="portada" >
+      <img src="/images/Portada.png" width="100%" alt="portada" >
+      <img src="/images/noeasy-cd.png" id='cd' alt="cd">
     </div>
+
     <div class="content">
-      <div class="container" style=" margin-bottom: 100px;"><div class="pregunta" style="display: flex; position:absolute;bottom: -260px;width: 760px; height: 38px; align-items: center; padding: 5px; font-family: Anybody; color: black;">EXPLORANDO EL EFECTO DEL CONSUMISMO FAN EN LA VENTA DE DISCOS FÍSICOS</div></div>
-      <div class="bajada">
-        <p>En un contexto mundial de dominancia del streaming respecto a otros formatos de consumo musical, las ventas de discos se encuentran en bajada. Pero, sorprendentemente, hay un segmento de la industria dónde se están observando diferentes resultados. <br><br>Con su particular <span class="highlight">modelo de ventas</span> y <span class="highlight">diseño de productos</span>, el kpop representa un fenómeno único en la escena musical actual. </p>
+      <div class="d1">
+        <div class="bajada">
+          <p>Para entender lo que esta sucediendo hoy en día con la venta de álbumes físicos, es importante fijarse en como son estos. </p>
+        </div>
+        <div class="imp-amarillo"><h3>EXPLOREMOS LA EXPERIENCIA ACTUAL DE COMPRAR UN ALBUM</h3></div>
+        <img src="/images/botones/flechas.svg" class="up-down" width=30px alt="flechas">
       </div>
-    
 
     <div class="gamification_portion">
         <div class="album_no_pcs">
@@ -111,9 +116,9 @@
             <div class="container"><div class="juego" style="background-color: #1a1a1a; width: 570px"><h3 style="font-family: Anybody;font-size: 18px; text-align: center; color: #ffffff">Tenés disponibles estas fichas, canjealas por tantos álbumes como quieras</h3></div></div>
             <br>
             <div class="ficha" style="display:flex; justify-content: center">
-              <img src="images/fichas.png" width=80px></div>
+              <img src="images/botones/fichas.png" width=80px alt="ficha"></div>
             <p>Tenés la posibilidad de comprar el álbum de Taylor Swift "1989 (Taylor's Version)". Compra tantos álbumes como quieras</p>
-            <img src="/images/1989_taylor.png" width=350px margin-top=10px alt="ts">
+            <img src="/images/albums/1989_taylor.png" width=350px margin-top=10px alt="ts">
             <br>
             <img src="/images/boton_compra.png" class="botonImagen" alt="boton" on:click={handleButtonClick}>
             <!-- <button on:click={handleButtonClick}>Comprar</button> -->
@@ -129,14 +134,16 @@
 
             <p>Tenés la posibilidad de comprar el álbum de NCT "Sticker". Compra tantos álbumes como quieras</p>
             <div class="cero_pcs" style="display:flex; align-items: center; column-gap: 250px">
-                <img src="/images/sticker.png" width=400 alt="nct">
+                <img src="/images/albums/sticker.png" width=400 alt="nct">
                 <img id="img_pc" src={pc_colec[i]} width=500 alt="nopcs">
             </div>
             <img src="/images/boton_compra.png" class="botonImagen" alt="boton" on:click={handleButtonClickWithPhotocard}>
             <div id="contenedor2"></div>           
         </div>
     </div>
+
     <br><br>
+
     <div class="story">
       <div class="container"><div class="pregunta2" style="display:flex; background-color: #1c10f6; height:80px; align-items:center">
         <h3 class="lol" style="color: white; font-family: Anybody">Y esto... ¿De qué sirve? ¿Para qué querría yo fotos de otra gente?</h3>
@@ -275,6 +282,13 @@
 </main>
 
 <style>
+    .imp-amarillo{
+      color:#DCFF00;
+      font-family:"Work Sans";
+      font-weight: SemiBold ;
+      font-size: 20px;
+    }
+
     .header {
     display: flex;
     justify-content: center;
@@ -286,8 +300,9 @@
     margin:100px;
     margin-bottom:0px;
     font-family: "Lato";
+    text-align: center;
     font-size: 20px;
-    color:white;
+    
   }
   .container{
     display: flex;
@@ -321,12 +336,11 @@
   } */
   .bajada {
     font-family: "Lato";
-    font-size: 25px;
+    font-size: 20px;
     font-weight: bold;
     text-align: center;
-    color: #c384ff;
+    color: #ffffff;
     margin-bottom: 100px;
-    margin-top: -50px;
 
   }
   .headline b {
@@ -338,7 +352,45 @@
     display: inline-block;
 }
 
+#cd {
+  width: 700px;
+  position: absolute;
+  left:75%;
+  animation: rotation 4s infinite linear;
+}
 
+@keyframes rotation {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(359deg);
+  }
+}
+
+.up-down{
+  animation: up-down linear 3s;
+  animation-iteration-count: infinite;
+  transform-origin: 50% 50%;
+}
+
+@keyframes up-down{
+  0% {
+    transform:  translate(1px,20px)  ;
+  }
+  24% {
+    transform:  translate(1px,30px)  ;
+  }
+  50% {
+    transform:  translate(1px,12px)  ;
+  }
+  74% {
+    transform:  translate(1px,22px)  ;
+  }
+  100% {
+    transform:  translate(1px,22px)  ;
+  }
+}
 
 @keyframes fadeOutMoveUp {
     0% {
@@ -385,4 +437,10 @@
     align-items: center;
     height: 600px;
   }
+
+  .d1 {
+    margin-bottom: 200px;
+    padding-top: 50px;
+  }
+  
 </style>
