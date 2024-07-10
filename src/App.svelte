@@ -25,35 +25,22 @@
     let bottom2 = 0.1
     
     /*Imagen cambiante pcs*/
-    let pc_colec = ["images/pcs/pcs0.png", "images/pcs/pcs1.png", "images/pcs/pcs2.png", "images/pcs/pcs3.png", "images/pcs/pcs4.png", "images/pcs/pcs5.png"]
+    let pc_colec = ["images/pcs/pcs0.png", "images/pcs/pcs1.png", "images/pcs/pcs2.png", "images/pcs/pcs2.png", "images/pcs/pcs2.png", "images/pcs/pcs3.png", "images/pcs/pcs4.png", "images/pcs/pcs5.png", "images/pcs/pcs6.png", "images/pcs/pcs7.png", "images/pcs/pcs8.png"]
     let i = 0
 
     /* Charts */
     let charts_ventas = {
-        0: "images/falopeada2.png",
-        1: "/images/falopeada1.png",
-        2: "/images/falopeada3.png",
-        3: "/images/falopeada4.png"
+        0: "/images/grafVentas/ventas1.png",
+        1: "/images/grafVentas/ventas2.png",
+        2: "/images/grafVentas/ventas3.png",
+        3: "images/grafVentas/ventas4.png"
     }
 
-    let charts_ventas2 = {
-        0: "images/falopeada2_2.png",
-        1: "/images/falopeada1_2.png",
-        2: "/images/falopeada3.png",
-        3: "/images/falopeada4_2.png"
-
-    }
-
-    let chart_top0 = {0: "/images/prim.png", 1: "/images/segun.png",2:"/images/ter.png",3:"/images/cuar.png",
-      4:"/images/quinto.png", 5:"/images/sext.png",6:"/images/sept.png",7:"/images/oct.png",8:"/images/nov.png",
-      9:"/images/dec.png",10:"/images/once.png",11:"/images/doce.png",12:"/images/trece.png",13:"/images/cator.png",
-      14:"/images/quince.png",15:"/images/dcseis.png",16:"/images/dcsiet.png",17:"/images/dcocho.png",18:"/images/dcnuev.png",
-      19:"/images/veinte.png",20:"/images/vntuno.png",}
-    let chart_top = {0: "/images/prim2.png",1:"/images/segun2.png",2:"/images/ter2.png",3:"/images/cuar2.png",
-      4:"/images/quinto2.png", 5:"/images/sext2.png",6:"/images/sept2.png",7:"/images/oct2.png",8:"/images/nov2.png",
-      9:"/images/dec2.png",10:"/images/once2.png",11:"/images/doce2.png",12:"/images/trece2.png",13:"/images/cator2.png",
-      14:"/images/quince2.png",15:"/images/dcseis2.png",16:"/images/dcsiet2.png",17:"/images/dcocho2.png",
-      18:"/images/dcnuev2.png",19:"/images/veinte2.png",20:"/images/vntuno2.png"}
+    let chart_top = {0: "/images/grafAlbums/prim2.png",1:"/images/grafAlbums/segun2.png",2:"/images/grafAlbums/ter2.png",3:"/images/grafAlbums/cuar2.png",
+      4:"/images/grafAlbums/quinto2.png", 5:"/images/grafAlbums/sext2.png",6:"/images/grafAlbums/sept2.png",7:"/images/grafAlbums/oct2.png",8:"/images/grafAlbums/nov2.png",
+      9:"/images/grafAlbums/dec2.png",10:"/images/grafAlbums/once2.png",11:"/images/grafAlbums/doce2.png",12:"/images/grafAlbums/trece2.png",13:"/images/grafAlbums/cator2.png",
+      14:"/images/grafAlbums/quince2.png",15:"/images/grafAlbums/dcseis2.png",16:"/images/grafAlbums/dcsiet2.png",17:"/images/grafAlbums/dcocho2.png",
+      18:"/images/grafAlbums/dcnuev2.png",19:"/images/grafAlbums/veinte2.png",20:"/images/grafAlbums/vntuno2.png"}
 
     let chart_tendencia_ventas = "/images/tendencia_ventas_punt_pcs.png"
     let chart_ganancia_ventas = "/images/ganancia_ventas.png"
@@ -120,9 +107,9 @@
       <div class="espacio" style="height:200px"></div>
     <div class="gamification_portion">
       <img src="public/images/botones/disclaimer.png" width=500px alt="advert">
-      <img src="public/images/botones/disclaimer2.png" width=100px alt="advert2" style="display: flex; position: relative; bottom: 220px; left:280px">
+      <img src="public/images/botones/disclaimer2.png" width=100px alt="advert2" style="display: flex; position: relative; bottom: 220px; left:20%">
       <img src="/images/botones/flechas.svg" class="up-down" width=30px alt="flechas">
-      <div class="espacio" style="height: 300px"></div>      
+      <div class="espacio" style="height: 200px"></div>      
 
         <div class="album_no_pcs">
 
@@ -142,12 +129,10 @@
             <br>
             <img src="/images/botones/boton_canjear.png" width=120px class="botonImagen" alt="boton" on:click={handleButtonClick}>
             <br><br>
-            <!-- <div class="container"><div class="juego" style="background-color: #1a1a1a; width: 570px"><h3 style="font-family: Anybody;font-size: 18px; text-align: center; color: #ffffff">Cuando termines, scrollea a la siguiente sección</h3></div></div> -->
             <div><h3 class="imp-amarillo">CUANDO TERMINES SCROLLEA A LA SIGUIENTE SECCIÓN</h3></div>
         </div>
-        <br>
-        <br>
-        <div class="reinicio" style="display: flex; flex-direction:column; height: 1200px; justify-content: center; align-items: center">
+
+        <div class="reinicio" style="display: flex; flex-direction:column; height: 1000px; justify-content: center; align-items: center">
           <div class="reinicio2" style="width: 800px">
             <p>En caso de que te hayas gastado todas las fichas, se reinician, <br>volvés a tener 100.000 fichas disponibles para canjear</p>
           </div>
@@ -158,9 +143,9 @@
             <p>Ahora tenés la posibilidad de comprar el álbum de Stray Kids “ROCK-STAR”<br>
               Tu objetivo es conseguir la foto de I.N, cuyo nombre se encuentra en el reverso
              <br> Nuevamente comprá cuantos quieras</p>
-            <div class="cero_pcs" style="display:flex; align-items: center; column-gap: 50px">
-                <img src="/images/albums/rockstar.png" width=300 alt="skz" style="position:relative; left: 150px">
-                <img id="img_pc" src={pc_colec[i]} width=500 alt="pcs" style="position:relative; left: 100px">
+            <div class="cero_pcs" style="display:flex; align-items: center; column-gap: 100px; margin-bottom:10px">
+                <img src="/images/albums/rockstar.png" width=300 alt="skz" style="position:relative; left: 14%">
+                <img id="img_pc" src={pc_colec[i]} width=500 alt="pcs" style="position:relative; left: 10%">
             </div>
             <img src="/images/botones/boton_canjear.png" width=120px class="botonImagen" alt="boton" on:click={handleButtonClickWithPhotocard}>
             <div id="contenedor2"></div>           
@@ -170,9 +155,20 @@
     <br><br>
 
     <div class="story">
-      <div class="container"><div class="pregunta2" style="display:flex; background-color: #1c10f6; height:80px; align-items:center">
-        <h3 class="lol" style="color: white; font-family: Anybody">Y esto... ¿De qué sirve? ¿Para qué querría yo fotos de otra gente?</h3>
-      </div></div>
+
+      <div class="container">
+        <div class="pregunta2" style="display:flex; flex-direction:column; margin-top:100px; align-items:center">
+          <h3 class="lol" style="background-color: #9FF52B; height:30px; align-items:center; color: black; font-family: Work Sans">Y esto... ¿De qué sirve? ¿Para qué querría yo fotos de otra gente?</h3>
+          <p style="margin-top:50px; margin-bottom:100px; width:80%; text-aling:center; font-family: Work Sans">Esas "fotos de otra gente" son las llamadas photocards, estas son pequeños cartones impresos con fotos. 
+          <br>También podrías preguntarte porque tanto escandalo por una foto, las photocards son artículos coleccionables en el mundo del K-pop, 
+          algo así como las cartas de Pokémon o las figuritas del álbum del mundial. Se incluyen en los álbumes de kpop como regalo, 
+          pero como en los sobres de figuritas, no vienen todas en todos los álbumes</p>
+      </div>
+
+      <div class="container">
+
+      </div>
+    </div>
 
       <Scroller
         top={top}
@@ -185,7 +181,7 @@
       >
         <div slot="background" class="image_container">
           <!-- <div width="500px"><Chart1 /></div> -->
-          <img src={charts_ventas2[index]} alt="charts_ventas">
+          <img src={charts_ventas[index]} alt="charts_ventas">
         </div>
         <div slot="foreground" class="foreground_container">
           <section class="step_foreground">
@@ -472,8 +468,8 @@
   }
 
   .d1 {
-    margin-bottom: 200px;
-    padding-top: 50px;
+    margin-bottom: 150px;
+    padding-top: 150px;
   }
   
 </style>
