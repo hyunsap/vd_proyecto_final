@@ -121,8 +121,12 @@
 
     <div class="content">
       <div class="d1">
+        <div style="display: flex; align-items:center;flex-direction:column; margin-left:20%; margin-right:20%; margin-bottom:400px; margin-top:100px">
+          <h3 class="lol" style="width:900px; background-color: #9FF52B; height:20px; text-align:center; justify-content:center; color: black; font-family: Work Sans; margin-bottom:100px">EXPLORANDO EL EFECTO DEL CONSUMISMO FAN EN LA VENTA DE DISCOS FÍSICOS</h3>
+          <p style="margin-left:15%; margin-right:15%">En un contexto mundial de dominancia del streaming respecto a otros formatos de consumo musical, las ventas de discos se encuentran en bajada, Pero, sorprendentemente, hay un segmento de la industria se estan observando diferentes resultados.</p>
+        </div>
         <div class="bajada">
-          <p>Para entender lo que esta sucediendo hoy en día con la venta de álbumes físicos, es importante fijarse en como son estos. </p>
+          <p>Para entender lo que esta sucediendo hoy en día con la venta de álbumes físicos, primero es <br>importante fijarse en como son estos. </p>
         </div>
         <div><h3 class="imp-amarillo">EXPLOREMOS LA EXPERIENCIA ACTUAL DE COMPRAR UN ALBUM</h3></div>
         <img src="/images/botones/flechas.svg" class="up-down" width=30px alt="flechas">
@@ -250,36 +254,15 @@
       </Scroller>
     </div>
     <br><br>
-    <div class="top20" style="margin-right:100px; margin-left: 100px">
-      <p>En el 2023 ha ocurrido un suceso histórico: 19 de los 20 álbumes mejores vendidos
-         forman parte del género musical emergente desde hace ya varios años. 
-         Según los registros de la IFPI (Federación Internacional de la Industria Fonográfica), 
-         el único álbum cuyas ventas físicas alcanzaron el top es 1989 (Taylor’s Version), 
-         lanzado por una de las artistas más populares del momento Taylor Swift. 
-      </p>
-      <p>Este fenómeno encuentra una posible explicación en una característica muy 
-        particular de los álbumes de kpop: las inclusiones. 
-        Especialmente, las photocards. Se trata de piezas coleccionables randomizadas, 
-        con fotos de artistas, muy codiciadas por los fans.</p>
-      <p>Cada álbum comprado contiene generalmente 1 o 2 de estas piezas, 
-        y la colección total puede ser muy extensa, llegando a más de 100 
-        photocards totales en algunos casos. Por ello, se ha extendido en la 
-        comunidad fan del kpop la práctica de comprar álbumes en cantidad con tal de 
-        completar una colección de photocards, y luego descartar los discos repetidos. 
+    <div class="top20" style="display:flex; flex-direction:column; margin-right:100px; margin-left: 100px;align-items:center">
+      <h3 class="lol" style="background-color: #9FF52B; height:30px; align-items:center; color: black; font-family: Work Sans;margin-top:100px">¿LA CANTIDAD DE PHOTOCARDS IMPORTAN?</h3>
+      <h3 class="imp-amarillo" style="margin-top: 80px;">TOP 20: ÁLBUMES MÁS VENDIDOS DE 2023</h3>
+      <p style="width: 70%; margin-bottom:0px">A partir de la lista de IFPI de los discos con mayores ventas físicas de 2023, se analiza la popularidad de un álbum, 
+        determinado a partir de las ventas físicas totales sobre la cantidad de streams en Spotify de cada álbum en 2023, 
+        y su correlación con la cantidad de photocards presentes, 
+        en particular cuántos álbumes habría que comprar para completar la colección si no hubiera repeticiones.
       </p>
     </div>
-    <br>
-      <div class="container" style="margin-top:400px">
-        <div class="pregunta" style="height:80px; align-items:center">
-          <h3 class="lol">Top 20: álbumes más vendidos de 2023</h3>
-        </div>
-      </div>
-      <br>
-
-      <div style="margin-right:100px; margin-left: 100px">A partir de la lista de IFPI de los discos con mayores ventas físicas de 2023, se analiza el puntaje de un album, 
-        determinado a partir de las ventas físicas totales sobre la popularidad del álbum, y su correlación con la cantidad 
-        de photocards presentes, en particular cuántos álbumes habría que comprar para completar la colección si no hubiera repeticiones.
-      </div>
   
     <div class="espacio" style="height:200px"></div>
     <!-- Segundo scroller -->
@@ -442,23 +425,41 @@
     <section class="step_foreground"><div class="epi_foreground2">Este es el top 20 de álbumes con más ventas físicas de 2023, en el cual se puede apreciar cierta correlación entre la popularidad de ventas y la cantidad de photocards.</div></section>
   </div>
   </Scroller>
-
-  <div class="corr"><p>Se puede encontrar entonces una correlación bastante fuerte entre 
-    cantidad de ventas físicas de un álbum y la cantidad total de photocards 
-    que pertenecen a la colección de dicho álbum.
-  </p></div>
-    
-
   
+  <div class="container">
+    <div class="pregunta2" style="display:flex; flex-direction:column; margin-top:100px; align-items:center; margin-top:100px; background-color:black">
+      <p style="margin-top:50px; margin-bottom:300px; width:80%; text-aling:center; font-family: Work Sans">En definitivas posible ver que este fenómeno encuentra su explicación en las photocards, 
+        hay una correlación bastante fuerte entre cantidad de ventas físicas de un álbum y la cantidad total de photocards que pertenecen a la colección de dicho álbum.
+        No es coincidencia que los álbumes que lideran y ocupan prácticamente todo el top 20 sean álbumes de kpop, y solo Taylor Swift, que es la artista más exitosa hoy en día, 
+        haya logrado entrar a este top.
+      </p>
+      <p style="width:60%; text-aling:center; font-family: Work Sans">
+        Aunque el hecho de que las ventas de discos físicos esten creciendo en la industria musical es algo bueno, no todo es color de rosas.
+        <br> <br> Nosotros consideramos la cantidad de álbumes que deberías comprar suponiendo que <br>nunca se repitieran las photocards al abrir álbumes.
+      </p>
+      <h3 class="imp-amarillo" style="margin-bottom: 200px;">¿QUE PASARÍA SI ESTAS SE REPITIERAN?</h3>
   </div>
-    
+  </div>
+
+  <footer class="footer">
+    <div class="text_ft">
+      <p class="text"> by Maru y Emi</p>
+    </div>
+    <div class="contenido">
+      <div class="links">
+        <a href="https://github.com/hyunsap/vd_proyecto_final" target="_blank"><img src="/images/github.svg" alt="logo github" style="width: 45px; height:45px; margin-right:15px"></a>
+        <a href="https://www.figma.com/design/OZ0bkh8UFGvNlxOPplalrv/Final?node-id=0-1&t=gKrjFSp326bvUV2w-1" target="_blank"><img src="/images/figma.svg" alt="logo figma" style="width: 45px; height:45px"></a>
+      </div>
+      <div><p id="link"> LINKS DEL PROYECTO </p></div>
+    </div>
+  </footer>
 
 
 </main>
 
 <style>
     h3{
-      font-family: "Lato";
+      font-family: "Work Sans";
       font-size: 20px; 
       text-align: center; 
       color: #ffffff
@@ -507,7 +508,7 @@
   }
 
   .bajada {
-    font-family: "Lato";
+    font-family: "Work Sans";
     font-size: 20px;
     font-weight: bold;
     text-align: center;
@@ -640,5 +641,46 @@
     margin-bottom: 150px;
     padding-top: 150px;
   }
+
+  .footer {
+	display: flex;
+  flex-direction: row;
+  column-gap: 1000px;
+  justify-content: center;
+  align-items: center;
+  width: 115%;
+  margin-top: 100px;
+  margin-bottom: -10px;
+  margin-left: -100px;
+  padding-right: 18px;
+  height: 100px;
+  background-color: #0068B3;
+  }
+.text_ft{
+  display: flex;
+  align-items: center;
+  margin-left: 40px;
+  height: 60px;
+  padding-left: 10px;
+}
+#link{
+  font-size: 15px;
+  font-family:"Work Sans";
+  font-weight: bold;
+  color: white;
+}
+.contenido{
+  display: flex;
+  flex-direction: row;
+  column-gap: 30px;
+}
+.text{
+  color: #DEFF4E;
+  font-size: 20px;
+  font-family:"Work Sans";
+  font-weight: bold;
+  text-align: center;
+}
+
   
 </style>
