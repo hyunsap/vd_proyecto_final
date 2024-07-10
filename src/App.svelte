@@ -3,8 +3,6 @@
     import {onMount} from "svelte"
     import * as d3 from "d3"
     import DebugScroller from "./components/DebugScroller.svelte"
-    // import Chart from "./components/charts.svelte"
-    // import Charts from "./components/charts.svelte";
 
     /* Variables para el scroller1 */
     let count
@@ -122,8 +120,8 @@
     <div class="content">
       <div class="d1">
         <div style="display: flex; align-items:center;flex-direction:column; margin-left:20%; margin-right:20%; margin-bottom:400px; margin-top:100px">
-          <h3 class="lol" style="width:900px; background-color: #9FF52B; height:20px; text-align:center; justify-content:center; color: black; font-family: Work Sans; margin-bottom:100px">EXPLORANDO EL EFECTO DEL CONSUMISMO FAN EN LA VENTA DE DISCOS FÍSICOS</h3>
-          <p style="margin-left:15%; margin-right:15%">En un contexto mundial de dominancia del streaming respecto a otros formatos de consumo musical, las ventas de discos se encuentran en bajada, Pero, sorprendentemente, hay un segmento de la industria se estan observando diferentes resultados.</p>
+          <h3 class="lol" style="width:900px; background-color: #9FF52B; height:30px; text-align:center; justify-content:center; color: black; font-family: Work Sans; margin-bottom:100px">EXPLORANDO EL EFECTO DEL CONSUMISMO FAN EN LA VENTA DE DISCOS FÍSICOS</h3>
+          <p>En un contexto mundial de dominancia del streaming respecto a otros formatos de consumo musical, las ventas de discos se encuentran en bajada. <br><br> Pero, sorprendentemente, hay un segmento de la industria se estan observando diferentes resultados.</p>
         </div>
         <div class="bajada">
           <p>Para entender lo que esta sucediendo hoy en día con la venta de álbumes físicos, primero es <br>importante fijarse en como son estos. </p>
@@ -140,7 +138,6 @@
       <div class="espacio" style="height: 200px"></div>      
 
         <div class="album_no_pcs">
-
             <br>
             <div class="container"><div class="juego" style="width: 800px"><h3 style="font-family: Lato;font-size: 20px; text-align: center; color: #ffffff">Vamos a jugar un juego<br>
               Tenes disponibles 100.000 fichas, podes canjearlas como quieras</h3></div></div>
@@ -191,10 +188,10 @@
     <div class="story">
 
       <div class="container">
-        <div class="pregunta2" style="display:flex; flex-direction:column; margin-top:100px; align-items:center">
+        <div class="pregunta2" style="display:flex; flex-direction:column; margin-top:100px; margin-left:120px; align-items:center">
           <h3 class="lol" style="background-color: #9FF52B; height:30px; align-items:center; color: black; font-family: Work Sans">Y esto... ¿De qué sirve? ¿Para qué querría yo fotos de otra gente?</h3>
-          <p style="margin-top:50px; margin-bottom:100px; width:80%; text-aling:center; font-family: Work Sans">Esas "fotos de otra gente" son las llamadas photocards, estas son pequeños cartones impresos con fotos. 
-          <br>También podrías preguntarte porque tanto escandalo por una foto, las photocards son artículos coleccionables en el mundo del K-pop, 
+          <p style="margin-top:50px; margin-bottom:100px; width:100%; text-aling:center; font-family: Work Sans">Esas "fotos de otra gente" son las llamadas photocards, estas son pequeños cartones impresos con fotos. 
+          <br><br>También podrías preguntarte porque tanto escandalo por una foto, las photocards son artículos coleccionables en el mundo del K-pop, 
           algo así como las cartas de Pokémon o las figuritas del álbum del mundial. Se incluyen en los álbumes de kpop como regalo, 
           pero como en los sobres de figuritas, no vienen todas en todos los álbumes</p>
       </div>
@@ -214,14 +211,13 @@
         bind:progress={progress}
       >
         <div slot="background" class="image_container">
-          <!-- <div width="500px"><Chart1 /></div> -->
-          <img src={charts_ventas[index]} alt="charts_ventas">
+          <img src={charts_ventas[index]} alt="charts_ventas" style="width: 450px; padding-left: 50px">
         </div>
         <div slot="foreground" class="foreground_container">
           <section class="step_foreground">
             <div class="epi_foreground">
-              <h3>¿Cómo se ve el mercado de ventas en música?</h3>
-              <p>Las ventas de álbumes occidentales en la última década presentan una baja
+              <h3 style="color: #4DB5FF">¿Cómo se ve el mercado de ventas en música?</h3>
+              <p>Las ventas de álbumes occidentales, principalmente de Estados Unidos y Europa, en la última década presentan una baja
                 de ventas físicas gradual, en gran parte causada por la aparición de los 
                 servicios de streaming.
               </p>
@@ -229,7 +225,7 @@
           </section>
           <section class="step_foreground">
             <div class="epi_foreground">
-              <h3>¿Qué diferencia se encuentra en kpop?</h3>
+              <h3 style="color: #FF0F9A">¿Qué diferencia se encuentra en kpop?</h3>
               <p>Por el contrario, las ventas en kpop cada año aumentan de manera exponencial,
                 ya que ofrecen una experiencia de consumidor más personalizada y llamativa.
                 Todo el diseño del álbum y sus inclusiones están pensados para la venta masiva.
@@ -238,14 +234,14 @@
           </section>
           <section class="step_foreground">
             <div class="epi_foreground">
-              <h3>¿Cómo se afecta al mercado actual?</h3>
+              <h3 style="color: #DCFF00">¿Cómo se afecta al mercado actual?</h3>
               <p>Se ha llegado a un punto en el que la venta de álbumes de kpop ha superado
                 a los álbumes del resto de la industria musical.</p>
             </div>
           </section>
           <section class="step_foreground">
             <div class="epi_foreground">
-              <h3>¿Cómo se afecta al mercado actual?</h3>
+              <h3 style="color: #DCFF00">¿Cómo se afecta al mercado actual?</h3>
               <p>De hecho, a partir de 2020 el mercado físico de álbumes experimenta una repuntada notable, 
                 en gran parte motivada por los álbumes de kpop.</p>
             </div>
@@ -426,9 +422,9 @@
   </div>
   </Scroller>
   
-  <div class="container">
+  <div class="container" style="margin-top: 400px">
     <div class="pregunta2" style="display:flex; flex-direction:column; margin-top:100px; align-items:center; margin-top:100px; background-color:black">
-      <p style="margin-top:50px; margin-bottom:300px; width:80%; text-aling:center; font-family: Work Sans">En definitivas posible ver que este fenómeno encuentra su explicación en las photocards, 
+      <p style="margin-top:50px; margin-bottom:200px; width:80%; text-aling:center; font-family: Work Sans">En definitiva posible ver que este fenómeno encuentra su explicación en las photocards, 
         hay una correlación bastante fuerte entre cantidad de ventas físicas de un álbum y la cantidad total de photocards que pertenecen a la colección de dicho álbum.
         No es coincidencia que los álbumes que lideran y ocupan prácticamente todo el top 20 sean álbumes de kpop, y solo Taylor Swift, que es la artista más exitosa hoy en día, 
         haya logrado entrar a este top.
@@ -447,8 +443,8 @@
     </div>
     <div class="contenido">
       <div class="links">
-        <a href="https://github.com/hyunsap/vd_proyecto_final" target="_blank"><img src="/images/github.svg" alt="logo github" style="width: 45px; height:45px; margin-right:15px"></a>
-        <a href="https://www.figma.com/design/OZ0bkh8UFGvNlxOPplalrv/Final?node-id=0-1&t=gKrjFSp326bvUV2w-1" target="_blank"><img src="/images/figma.svg" alt="logo figma" style="width: 45px; height:45px"></a>
+        <a href="https://github.com/hyunsap/vd_proyecto_final" target="_blank"><img src="/images/github.svg" alt="logo github" style="width: 40px; height:40px; margin-right:15px"></a>
+        <a href="https://www.figma.com/design/OZ0bkh8UFGvNlxOPplalrv/Final?node-id=0-1&t=gKrjFSp326bvUV2w-1" target="_blank"><img src="/images/figma.svg" alt="logo figma" style="width: 40px; height:40px"></a>
       </div>
       <div><p id="link"> LINKS DEL PROYECTO </p></div>
     </div>
