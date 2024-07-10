@@ -431,9 +431,9 @@
       </p>
       <p style="width:60%; text-aling:center; font-family: Work Sans">
         Aunque el hecho de que las ventas de discos físicos esten creciendo en la industria musical es algo bueno, no todo es color de rosas.
-        <br> <br> Nosotros consideramos la cantidad de álbumes que deberías comprar suponiendo que <br>nunca se repitieran las photocards al abrir álbumes.
+        <br> <br> Se ha considerado la cantidad de álbumes que deberías comprar suponiendo que nunca se repitieran las photocards al abrir álbumes.<br>Pero esto no es realmente así...<br>
       </p>
-      <h3 class="imp-amarillo" style="margin-bottom: 200px;">¿QUE PASARÍA SI ESTAS SE REPITIERAN?</h3>
+      <h3 class="imp-amarillo" style="margin-bottom: 200px;">¿QUE PASA CON TODOS LOS ÁLBUMES COMPRADOS?</h3>
   </div>
   </div>
 
