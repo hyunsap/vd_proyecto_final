@@ -75,11 +75,19 @@
     function handleButtonClickWithPhotocard() {
         const textoAnimado = document.createElement("div");
         textoAnimado.className = "animated-text";
-        textoAnimado.textContent = "-$30 + 1 photocard";
+        // textoAnimado.textContent = "-$10k + 1 photo";
 
       
 
-        i=(i+1) % pc_colec.length;
+        if (i < pc_colec.length-1){
+          i=i+1;
+          textoAnimado.textContent = "-$10k + 1 photo";
+
+        }
+        
+        else {
+          textoAnimado.textContent = "Sin fichas";
+        }
 
         const contenedor = document.getElementById("contenedor2");
         contenedor.appendChild(textoAnimado);
@@ -105,14 +113,16 @@
         <div class="bajada">
           <p>Para entender lo que esta sucediendo hoy en día con la venta de álbumes físicos, es importante fijarse en como son estos. </p>
         </div>
-        <div class="imp-amarillo"><h3>EXPLOREMOS LA EXPERIENCIA ACTUAL DE COMPRAR UN ALBUM</h3></div>
+        <div><h3 class="imp-amarillo">EXPLOREMOS LA EXPERIENCIA ACTUAL DE COMPRAR UN ALBUM</h3></div>
         <img src="/images/botones/flechas.svg" class="up-down" width=30px alt="flechas">
       </div>
       <!-- <br><br><br><br><br> -->
       <div class="espacio" style="height:200px"></div>
     <div class="gamification_portion">
-      <img src="public/images/botones/disclaimer.png" alt="advert">
-      <img src="public/images/botones/disclaimer2.png" alt="advert2" style="display: flex; position: relative; bottom: 450px">      
+      <img src="public/images/botones/disclaimer.png" width=500px alt="advert">
+      <img src="public/images/botones/disclaimer2.png" width=100px alt="advert2" style="display: flex; position: relative; bottom: 220px; left:280px">
+      <img src="/images/botones/flechas.svg" class="up-down" width=30px alt="flechas">
+      <div class="espacio" style="height: 300px"></div>      
 
         <div class="album_no_pcs">
 
@@ -120,7 +130,7 @@
             <div class="container"><div class="juego" style="width: 800px"><h3 style="font-family: Lato;font-size: 20px; text-align: center; color: #ffffff">Vamos a jugar un juego<br>
               Tenes disponibles 100.000 fichas, podes canjearlas como quieras</h3></div></div>
             <div class="ficha" style="display:flex; justify-content: center">
-              <img src="images/botones/fichas.png" width=200px alt="ficha"></div>
+              <img src="images/botones/fichas.png" width=100px alt="ficha"></div>
             <div class="container"><div class="juego" style="width: 800px"><h3 style="font-family: Lato;font-size: 20px; text-align: center; color: #ffffff">
               La única regla es que en cada sección solo podes comprar los álbumes que te alcancen, cuando se te acaben las fichas vas a tener que seguir scrolleando.</h3></div>
             </div>
@@ -131,28 +141,28 @@
             <img src="/images/albums/1989_taylor.png" width=300px margin-top=10px alt="ts">
             <br>
             <img src="/images/botones/boton_canjear.png" width=120px class="botonImagen" alt="boton" on:click={handleButtonClick}>
-            <br><br><br><br>
+            <br><br>
             <!-- <div class="container"><div class="juego" style="background-color: #1a1a1a; width: 570px"><h3 style="font-family: Anybody;font-size: 18px; text-align: center; color: #ffffff">Cuando termines, scrollea a la siguiente sección</h3></div></div> -->
-            <div class="imp-amarillo"><h3>CUANDO TERMINES SCROLLEA A LA SIGUIENTE SECCIÓN</h3></div>
+            <div><h3 class="imp-amarillo">CUANDO TERMINES SCROLLEA A LA SIGUIENTE SECCIÓN</h3></div>
         </div>
         <br>
         <br>
         <div class="reinicio" style="display: flex; flex-direction:column; height: 1200px; justify-content: center; align-items: center">
           <div class="reinicio2" style="width: 800px">
-            <h3>En caso de que te hayas gastado todas las fichas, se reinician, <br>volvés a tener 100.000 fichas disponibles para canjear</h3>
+            <p>En caso de que te hayas gastado todas las fichas, se reinician, <br>volvés a tener 100.000 fichas disponibles para canjear</p>
           </div>
-          <img src="images/botones/fichas.png" width=200px alt="ficha">        
+          <img src="images/botones/fichas.png" width=100px alt="ficha">        
         </div>
-        
-        <div class="album_pcs">
-          <div class="container"><div class="juego" style="margin-top: 50px;background-color: #1a1a1a; width: 700px"><h3 style="font-family: Anybody;font-size: 18px; text-align: center; color: #ffffff">Ahora el álbum es de kpop. Nuevamente, comprá cuantos quieras</h3></div></div>
 
-            <p>Tenés la posibilidad de comprar el álbum de NCT "Sticker". Compra tantos álbumes como quieras</p>
+        <div class="album_pcs">
+            <p>Ahora tenés la posibilidad de comprar el álbum de Stray Kids “ROCK-STAR”<br>
+              Tu objetivo es conseguir la foto de I.N, cuyo nombre se encuentra en el reverso
+             <br> Nuevamente comprá cuantos quieras</p>
             <div class="cero_pcs" style="display:flex; align-items: center; column-gap: 50px">
-                <img src="/images/albums/rockstar.png" width=300 alt="skz">
-                <img id="img_pc" src={pc_colec[i]} width=500 alt="nopcs">
+                <img src="/images/albums/rockstar.png" width=300 alt="skz" style="position:relative; left: 150px">
+                <img id="img_pc" src={pc_colec[i]} width=500 alt="pcs" style="position:relative; left: 100px">
             </div>
-            <img src="/images/boton_compra.png" class="botonImagen" alt="boton" on:click={handleButtonClickWithPhotocard}>
+            <img src="/images/botones/boton_canjear.png" width=120px class="botonImagen" alt="boton" on:click={handleButtonClickWithPhotocard}>
             <div id="contenedor2"></div>           
         </div>
     </div>
@@ -297,6 +307,13 @@
 </main>
 
 <style>
+    h3{
+      font-family: "Lato";
+      font-size: 20px; 
+      text-align: center; 
+      color: #ffffff
+
+    } 
     .imp-amarillo{
       color:#DCFF00;
       font-family:"Work Sans";
