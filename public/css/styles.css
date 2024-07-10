@@ -74,8 +74,16 @@ button:focus-visible {
 
 .animated-text {
   position: absolute;
-  color: red;
-  font-size: 40px;
+  color: #FF0F9A;
+  font-size: 18px;
+  font-weight: bold;
+  animation: fadeOutMoveUp 1s forwards;
+}
+
+.animated-text2 {
+  position: absolute;
+  color: #9FF52B;
+  font-size: 18px;
   font-weight: bold;
   animation: fadeOutMoveUp 1s forwards;
 }

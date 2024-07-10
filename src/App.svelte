@@ -27,6 +27,7 @@
     /*Imagen cambiante pcs*/
     let pc_colec = ["images/pcs/pcs0.png", "images/pcs/pcs1.png", "images/pcs/pcs2.png", "images/pcs/pcs2.png", "images/pcs/pcs2.png", "images/pcs/pcs3.png", "images/pcs/pcs4.png", "images/pcs/pcs5.png", "images/pcs/pcs6.png", "images/pcs/pcs7.png", "images/pcs/pcs8.png"]
     let i = 0
+    let i0 = 0
 
     /* Charts */
     let charts_ventas = {
@@ -36,53 +37,76 @@
         3: "images/grafVentas/ventas4.png"
     }
 
-    let chart_top = {0: "/images/grafAlbums/prim2.png",1:"/images/grafAlbums/segun2.png",2:"/images/grafAlbums/ter2.png",3:"/images/grafAlbums/cuar2.png",
-      4:"/images/grafAlbums/quinto2.png", 5:"/images/grafAlbums/sext2.png",6:"/images/grafAlbums/sept2.png",7:"/images/grafAlbums/oct2.png",8:"/images/grafAlbums/nov2.png",
-      9:"/images/grafAlbums/dec2.png",10:"/images/grafAlbums/once2.png",11:"/images/grafAlbums/doce2.png",12:"/images/grafAlbums/trece2.png",13:"/images/grafAlbums/cator2.png",
-      14:"/images/grafAlbums/quince2.png",15:"/images/grafAlbums/dcseis2.png",16:"/images/grafAlbums/dcsiet2.png",17:"/images/grafAlbums/dcocho2.png",
-      18:"/images/grafAlbums/dcnuev2.png",19:"/images/grafAlbums/veinte2.png",20:"/images/grafAlbums/vntuno2.png"}
+    let chart_top = {0: "/images/grafAlbums/zero2.png",1: "/images/grafAlbums/prim2.png",2:"/images/grafAlbums/segun2.png",3:"/images/grafAlbums/ter2.png",4:"/images/grafAlbums/cuar2.png",
+      5:"/images/grafAlbums/quinto2.png", 6:"/images/grafAlbums/sext2.png",7:"/images/grafAlbums/sept2.png",8:"/images/grafAlbums/oct2.png",9:"/images/grafAlbums/nov2.png",
+      10:"/images/grafAlbums/dec2.png",11:"/images/grafAlbums/once2.png",12:"/images/grafAlbums/doce2.png",13:"/images/grafAlbums/trece2.png",14:"/images/grafAlbums/cator2.png",
+      15:"/images/grafAlbums/quince2.png",16:"/images/grafAlbums/dcseis2.png",17:"/images/grafAlbums/dcsiet2.png",18:"/images/grafAlbums/dcocho2.png",
+      19:"/images/grafAlbums/dcnuev2.png",20:"/images/grafAlbums/veinte2.png",21:"/images/grafAlbums/vntuno2.png"}
 
     let chart_tendencia_ventas = "/images/tendencia_ventas_punt_pcs.png"
     let chart_ganancia_ventas = "/images/ganancia_ventas.png"
 
+    let contador_fichas = {0:"/images/botones/contador-fichas0.png", 1:"/images/botones/contador-fichas1.png",
+      2:"/images/botones/contador-fichas2.png", 3:"/images/botones/contador-fichas3.png",
+      4:"/images/botones/contador-fichas4.png", 5:"/images/botones/contador-fichas5.png", 
+      6:"/images/botones/contador-fichas6.png", 7:"/images/botones/contador-fichas7.png",
+      8:"/images/botones/contador-fichas8.png", 9:"/images/botones/contador-fichas9.png",
+      10:"/images/botones/contador-fichas10.png", 
+    }
+
     function handleButtonClick() {
         const textoAnimado = document.createElement("div");
         textoAnimado.className = "animated-text";
-        textoAnimado.textContent = "-$30";
+        textoAnimado.textContent = "-$10k";
+        if (i0 < pc_colec.length-1){
+          i0=i0+1;
+        }
+        else {
+          textoAnimado.textContent = "Sin fichas";
+          i0=pc_colec.length-1;
+        }
 
-        const contenedor = document.getElementById("contenedor");
+        const contenedor = document.getElementById("contenedor0");
         contenedor.appendChild(textoAnimado);
 
         // Eliminar el texto animado después de la animación
         setTimeout(() => {
             contenedor.removeChild(textoAnimado);
-        }, 1000); // Debe coincidir con la duración de la animación en CSS
+        }, 1000);
     }
 
     function handleButtonClickWithPhotocard() {
         const textoAnimado = document.createElement("div");
+        const textoAnimado2 = document.createElement("div");
         textoAnimado.className = "animated-text";
-        // textoAnimado.textContent = "-$10k + 1 photo";
-
-      
-
+        textoAnimado2.className = "animated-text2";      
         if (i < pc_colec.length-1){
-          i=i+1;
-          textoAnimado.textContent = "-$10k + 1 photo";
+          if (i===2 || i===3 || i===6 || i===9){
+            textoAnimado2.textContent = "Repetida";
+            textoAnimado2.style ="color: red";
+          }
+          else{
+            textoAnimado2.textContent = "+1 photo";
+          } 
 
+          i=i+1;
+          textoAnimado.textContent = "-$10k";
         }
-        
+
         else {
           textoAnimado.textContent = "Sin fichas";
         }
 
-        const contenedor = document.getElementById("contenedor2");
-        contenedor.appendChild(textoAnimado);
 
+        const contenedor = document.getElementById("contenedor1");
+        contenedor.appendChild(textoAnimado);
+        const contenedor2 = document.getElementById("contenedor2");
+        contenedor2.appendChild(textoAnimado2);
         // Eliminar el texto animado después de la animación
         setTimeout(() => {
             contenedor.removeChild(textoAnimado);
-        }, 1000); // Debe coincidir con la duración de la animación en CSS
+            contenedor2.removeChild(textoAnimado2);
+        }, 1000); 
     }
 
     onMount(()=>{})
@@ -125,9 +149,12 @@
 
             
             <p>Tenés la posibilidad de comprar el álbum de Taylor Swift "1989 (Taylor's Version)". <br>Compra tantos álbumes como quieras</p>
+            <br>
+            <img src={contador_fichas[i0]} alt="contador" style="position: absolute; width: 100px; padding-left: 400px">
             <img src="/images/albums/1989_taylor.png" width=300px margin-top=10px alt="ts">
             <br>
             <img src="/images/botones/boton_canjear.png" width=120px class="botonImagen" alt="boton" on:click={handleButtonClick}>
+            <div id="contenedor0"></div>           
             <br><br>
             <div><h3 class="imp-amarillo">CUANDO TERMINES SCROLLEA A LA SIGUIENTE SECCIÓN</h3></div>
         </div>
@@ -143,12 +170,15 @@
             <p>Ahora tenés la posibilidad de comprar el álbum de Stray Kids “ROCK-STAR”<br>
               Tu objetivo es conseguir la foto de I.N, cuyo nombre se encuentra en el reverso
              <br> Nuevamente comprá cuantos quieras</p>
-            <div class="cero_pcs" style="display:flex; align-items: center; column-gap: 100px; margin-bottom:10px">
+             <img src={contador_fichas[i]} alt="contador" style="position: relative; width: 100px; right: 350px">
+             <div class="cero_pcs" style="display:flex; align-items: center; column-gap: 100px; margin-bottom:10px">
                 <img src="/images/albums/rockstar.png" width=300 alt="skz" style="position:relative; left: 14%">
                 <img id="img_pc" src={pc_colec[i]} width=500 alt="pcs" style="position:relative; left: 10%">
             </div>
             <img src="/images/botones/boton_canjear.png" width=120px class="botonImagen" alt="boton" on:click={handleButtonClickWithPhotocard}>
+            <div id="contenedor1"></div>
             <div id="contenedor2"></div>           
+           
         </div>
     </div>
 
@@ -220,7 +250,7 @@
       </Scroller>
     </div>
     <br><br>
-    <div class="top20">
+    <div class="top20" style="margin-right:100px; margin-left: 100px">
       <p>En el 2023 ha ocurrido un suceso histórico: 19 de los 20 álbumes mejores vendidos
          forman parte del género musical emergente desde hace ya varios años. 
          Según los registros de la IFPI (Federación Internacional de la Industria Fonográfica), 
@@ -239,18 +269,19 @@
       </p>
     </div>
     <br>
-      <div class="container">
+      <div class="container" style="margin-top:400px">
         <div class="pregunta" style="height:80px; align-items:center">
           <h3 class="lol">Top 20: álbumes más vendidos de 2023</h3>
         </div>
       </div>
       <br>
 
-      <div>A partir de la lista de IFPI de los discos con mayores ventas físicas de 2023, se analiza el puntaje de un album, 
+      <div style="margin-right:100px; margin-left: 100px">A partir de la lista de IFPI de los discos con mayores ventas físicas de 2023, se analiza el puntaje de un album, 
         determinado a partir de las ventas físicas totales sobre la popularidad del álbum, y su correlación con la cantidad 
-        de photocards presentes, en particular cuántos álbumes habría que comprar para completar la colección si no hubiera repeticiones.</div>
+        de photocards presentes, en particular cuántos álbumes habría que comprar para completar la colección si no hubiera repeticiones.
+      </div>
   
-    <br><br>
+    <div class="espacio" style="height:200px"></div>
     <!-- Segundo scroller -->
     <Scroller
     top={top2}
@@ -261,31 +292,154 @@
     bind:offset={offset2}
     bind:progress={progress2}
   >
-  <div slot="background">
-    <img src={chart_top[index2]} alt="dad" width=680px>
+  <div slot="background" class="background_container">
+    <img src={chart_top[index2]} alt="dad" width=600px>
   </div>
   <div slot="foreground" class="foreground_container2">
-    <section class="step_foreground"><div class="epi_foreground">El disco físico más vendido de 2023: FML, de Seventeen. Cuenta con un total de 72 photocards, y cada álbum trae incluidas 2. Cuenta con una puntuación de 18, al tener 6.4 millones de copias vendidas sobre 360 millones de streams.</div></section>
-    <section class="step_foreground"><div class="epi_foreground">5-Star de Stray Kids cuenta con el segundo puesto. Con 5.3 millones de copias vendidas sobre 596 millones de streams, su puntuación es de 9 puntos.</div></section>
-    <section class="step_foreground"><div class="epi_foreground">En el tercer puesto se encuentra ISTJ de NCT Dream, el cual logró 4.5 millones de ventas.</div></section>
-    <section class="step_foreground"><div class="epi_foreground">Seventeen, con un segundo álbum, llega al cuarto lugar con 4.5 millones de ventas, con tan solo 119 millones de streams.</div></section>
-    <section class="step_foreground"><div class="epi_foreground">Stray Kids también vuelve a aparecer con Rockstar, álbum que contó con 4.2 millones de copias vendidas y 313 millones de streams.</div></section>
-    <section class="step_foreground"><div class="epi_foreground">El único álbum no perteneciente al kpop que se encuentra entre los 20 más vendidos: 1989 (Taylor's Version) de Taylor Swift. Siendo uno de los discos más populares de 2023, con 3 billones de reproducciones, se mete en el top con una puntuación relativamente baja.</div></section>
-    <section class="step_foreground"><div class="epi_foreground">Golden de Jungkook, perteneciente a BTS, también cuenta con un alto número de streams que ronda los 3 billones, y solamente un total de 4 photocards, con 2 en cada álbum. Se encuentra en el séptimo lugar con 2.7 millones de copias vendidas.</div></section>
-    <section class="step_foreground"><div class="epi_foreground">El octavo puesto pertenece a Exist de EXO, el cual contó con 2.3 millones de ventas y 134 millones de reproducciones. Contiene en total 24 photocards, y cada álbum solo trae 1 incluida.</div></section>
-    <section class="step_foreground"><div class="epi_foreground">El noveno puesto pertenece a I've Mine de IVE, el cual contó con 2.2 millones de ventas y 187 millones de reproducciones. Contiene en total 12 photocards, y cada álbum solo trae 1 incluida.</div></section>
-    <section class="step_foreground"><div class="epi_foreground">El déximo puesto pertenece a Layover de V, miembro de BTS, que con 1.3 billones de streams y 5 photocards de 15 incluidas alcanzó los 2.2 millones de ventas</div></section>
-    <section class="step_foreground"><div class="epi_foreground">En el puesto once se encuentra Youth in the Shade, el álbum debut de Zerobaseone, el cual contó con 2.1 millones de ventas. Impresionante número comparado con las 87 millones de reproducciones que obtuvo el álbum. La versión física incluye 1 photocard de 36.</div></section>
-    <section class="step_foreground"><div class="epi_foreground">El doceavo lugar pertenece a NewJeans, con el álbum Get Up, el cual casi alcanzó el billón de reproducciones y contó con 2.1 millones de ventas, conteniendo 5 photocards de 30 en cada disco.</div></section>
-    <section class="step_foreground"><div class="epi_foreground">En décimotercer puesto se encuentra aespa, cuyo álbum My World cónto con 239 millones de streams y 2.1 millones de ventas, con 1 photocard incluida de 8 totales. </div></section>
-    <section class="step_foreground"><div class="epi_foreground">El puesto catorce pertenece a TXT, con 2 millones de copias vendidas y 268 millones de streams, contando cada disco con 1 photocard de 15.</div></section>
-    <section class="step_foreground"><div class="epi_foreground">En el lugar 15, con 2 millones de ventas, se encuentra I Feel de (G)I-dle, el cual contó con 339 millones de streams y 1 photocard de 15 incluida</div></section>
-    <section class="step_foreground"><div class="epi_foreground">En el puesto 16 se encuentra Fact Check de NCT 127 con 1.9 millones de copias vendidas y 88 millones de streams. Cuenta con 1 photocard de 27 incluida. </div></section>
-    <section class="step_foreground"><div class="epi_foreground">El lugar 17 pertenece a Enhypen con Dark Blood, álbum muy popular con 400 millones de streams y 1.7 millones de ventas. Contiene 1 pc de 27. </div></section>
-    <section class="step_foreground"><div class="epi_foreground">Otro álbum de IVE, I've IVE, se encuentra en el puesto 18, con 1.7 millones de ventas y 479 millones de streams. Cuenta con 1 pc incluida de 18.</div></section>
-    <section class="step_foreground"><div class="epi_foreground">Otro miembro de BTS, Jimin, aparece en la lista en el penúltimo lugar con el álbum Face, con 1.7 millones de ventas frente a 1.8 billones de streams, contando con un puntaje bastante bajo. Trae 1 pc de 6 posibles.</div></section>
-    <section class="step_foreground"><div class="epi_foreground">Por último, nuevamente aparece Enhypen en la lista. Su disco Orange Blood cuenta con 1.7 millones de ventas y 147 millones de reproducciones. Cada álbum incluye 2 photocards de 28 totales.</div></section>
-    <section class="step_foreground"><div class="epi_foreground">Se presencia una tendencia de aumento de la puntuación mientras más discos comprados requiera conseguir todas las photocards.</div></section>
+    <section class="step_foreground"><div class="epi_foreground2">Esta es la distribución de popularidad de ventas a partir de las photocards de los 20 álbumes más vendidos de 2023: en rosa aquellos que son de kpop y en azul el que no lo es. <br>Exploremos cómo se ve el top 20...</div></section>
+    <section class="step_foreground"><div class="epi_foreground2">1° puesto: <br>FML - Seventeen<br>
+      Popularidad(ventas/streams): 18<br>
+      Ventas: 6.4 millones<br>
+      Streams: 360 millones<br>
+      Photocards totales: 72<br>
+      Photocards incluidas: 2<br>
+    </div></section>
+    <section class="step_foreground"><div class="epi_foreground2">2° puesto: <br>5-Star - Stray Kids<br>
+      Popularidad (ventas/streams): 9<br>
+      Ventas: 5.3 millones<br>
+      Streams: 596 millones<br>
+      Photocards totales: 24<br>
+      Photocards incluidas: 2<br>
+    </div></section>
+    <section class="step_foreground"><div class="epi_foreground2">3° puesto: <br>ISTJ - NCT Dream<br>
+      Popularidad (ventas/streams): 29<br>
+      Ventas: 4.5 millones<br>
+      Streams: 160 millones<br>
+      Photocards totales: 14<br>
+      Photocards incluidas: 1<br>
+      </div></section>
+    <section class="step_foreground"><div class="epi_foreground2">4° puesto: <br>Seventeenth Heaven - Seventeen
+      <br>Popularidad (ventas/streams): 37
+      <br>Ventas: 4.5 millones
+      <br>Streams: 120 millones
+      <br>Photocards totales: 72
+      <br>Photocards incluidas: 2
+      </div></section>
+    <section class="step_foreground"><div class="epi_foreground2">5° puesto: <br>Rockstar - Stray Kids<br>
+      Popularidad (ventas/streams): 13<br>
+      Ventas: 4.2 millones<br>
+      Streams: 313 millones<br>
+      Photocards totales: 16<br>
+      Photocards incluidas: 1<br>
+      </div></section>
+    <section class="step_foreground"><div class="epi_foreground2">6° puesto: <br>1989 (Taylor’s Version) - Taylor Swift<br>
+      Popularidad (ventas/streams): 1<br>
+      Ventas: 2.8 millones<br>
+      Streams: 3075 millones<br>
+      Photocards totales: 0<br>
+      Photocards incluidas: 0<br>
+      </div></section>
+    <section class="step_foreground"><div class="epi_foreground2">7° puesto: <br>Golden - Jungkook<br>
+      Popularidad (ventas/streams): 1<br>
+      Ventas: 2.7 millones<br>
+      Streams: 3042 millones<br>
+      Photocards totales: 4<br>
+      Photocards incluidas: 2<br>
+      </div></section>
+    <section class="step_foreground"><div class="epi_foreground2">8° puesto: <br>Exist - EXO<br>
+      Popularidad (ventas/streams): 17<br>
+      Ventas: 2.3 millones<br>
+      Streams: 134 millones<br>
+      Photocards totales: 24<br>
+      Photocards incluidas: 1<br>
+      </div></section>
+    <section class="step_foreground"><div class="epi_foreground2">9° puesto: <br>I’ve Mine - IVE<br>
+      Popularidad (ventas/streams): 12<br>
+      Ventas: 2.2 millones<br>
+      Streams: 187 millones<br>
+      Photocards totales: 12<br>
+      Photocards incluidas: 1<br>
+      </div></section>
+    <section class="step_foreground"><div class="epi_foreground2">10° puesto: <br>Layover - V<br>
+      Popularidad (ventas/streams): 2<br>
+      Ventas: 2.2 millones<br>
+      Streams: 1313 millones<br>
+      Photocards totales: 15<br>
+      Photocards incluidas: 5<br>
+      </div></section>
+    <section class="step_foreground"><div class="epi_foreground2">11° puesto: <br>Youth in the Shade - Zerobaseone<br>
+      Popularidad (ventas/streams): 24<br>
+      Ventas: 2.1 millones<br>
+      Streams: 87 millones<br>
+      Photocards totales: 36<br>
+      Photocards incluidas: 1<br>
+      </div></section>
+    <section class="step_foreground"><div class="epi_foreground2">
+      12° puesto: <br>My World - aespa<br>
+      Popularidad (ventas/streams): 9<br>
+      Ventas: 2.1 millones<br>
+      Streams: 239 millones<br>
+      Photocards totales: 8<br>
+      Photocards incluidas: 1<br>
+      </div></section>
+    <section class="step_foreground"><div class="epi_foreground2">13° puesto: <br>The Name Chapter: Freefall - TXT<br>
+      Popularidad (ventas/streams): 7<br>
+      Ventas: 2 millones<br>
+      Streams: 268 millones<br>
+      Photocards totales: 15<br>
+      Photocards incluidas: 1<br>
+       </div></section>
+    <section class="step_foreground"><div class="epi_foreground2">14° puesto: <br>I Feel - (G)I-dle<br>
+      Popularidad (ventas/streams): 6<br>
+      Ventas: 2 millones<br>
+      Streams: 339 millones<br>
+      Photocards totales: 15<br>
+      Photocards incluidas: 1<br>
+      </div></section>
+    <section class="step_foreground"><div class="epi_foreground2">15° puesto: <br>Fact Check - NCT 127<br>
+      Popularidad (ventas/streams): 22<br>
+      Ventas: 1.9 millones<br>
+      Streams: 88 millones<br>
+      Photocards totales: 27<br>
+      Photocards incluidas: 1<br>
+      </div></section>
+    <section class="step_foreground"><div class="epi_foreground2">16° puesto: <br>Dark Blood - Enhypen<br>
+      Popularidad (ventas/streams): 4<br>
+      Ventas: 1.7 millones<br>
+      Streams: 404 millones<br>
+      Photocards totales: 21<br>
+      Photocards incluidas: 1<br>
+       </div></section>
+    <section class="step_foreground"><div class="epi_foreground2">17° puesto: <br>I’ve IVE - IVE<br>
+      Popularidad (ventas/streams): 4<br>
+      Ventas: 1.7 millones<br>
+      Streams: 479 millones<br>
+      Photocards totales: 18<br>
+      Photocards incluidas: 1<br>
+      </div></section>
+    <section class="step_foreground"><div class="epi_foreground2">18° puesto: <br>Face - Jimin<br>
+      Popularidad (ventas/streams): 2<br>
+      Ventas: 1.7 millones<br>
+      Streams: 1889 millones<br>
+      Photocards totales: 6<br>
+      Photocards incluidas: 1<br>
+      </div></section>
+    <section class="step_foreground"><div class="epi_foreground2">19° puesto: <br>Orange Blood - Enhypen<br>
+      Popularidad (ventas/streams): 12<br>
+      Ventas: 1.7 millones<br>
+      Streams: 141 millones<br>
+      Photocards totales: 28<br>
+      Photocards incluidas: 2<br>
+      </div></section>
+    <section class="step_foreground"><div class="epi_foreground2">
+      20° puesto: <br>Drama - aespa<br>
+      Popularidad (ventas/streams): 7<br>
+      Ventas: 1.5 millones<br>
+      Streams: 224 millones<br>
+      Photocards totales: 8<br>
+      Photocards incluidas: 1<br>
+      </div></section>
+    <section class="step_foreground"><div class="epi_foreground2">Este es el top 20 de álbumes con más ventas físicas de 2023, en el cual se puede apreciar cierta correlación entre la popularidad de ventas y la cantidad de photocards.</div></section>
   </div>
   </Scroller>
 
@@ -348,21 +502,10 @@
     text-align: center;
   }
 
-  .highlight{
-    color: #02D56D;
-    font-weight: bold;
-  }
-
   .botonImagen{
     cursor:pointer;
   }
-  /* .headline {
-    font-size: 30px;
-    line-height: 1.2;
-    font-weight: normal;
-    text-align: center;
-    margin: 20px;
-  } */
+
   .bajada {
     font-family: "Lato";
     font-size: 20px;
@@ -372,14 +515,26 @@
     margin-bottom: 100px;
 
   }
-  .headline b {
-    display: block;
-  }
 
-  #contenedor, #contenedor2 {
+  #contenedor0, #contenedor1 {
     position: relative;
     display: inline-block;
-}
+    bottom: 45px;
+    left: 20px;
+    width: 100px;
+  }
+
+  #contenedor0{
+    bottom: 35px;
+  }
+
+  #contenedor2 {
+    position: relative;
+    display: inline-block;
+    bottom: 25px;
+    right:82px;
+    width:100px
+  }
 
 #cd {
   width: 700px;
@@ -439,9 +594,9 @@
   }
   .foreground_container2 {
     pointer-events: none;
-    padding-left: 60%;
+    /* padding-left: 50%; */
+    padding-right: 80px;
   }
-
 
   .step_foreground {
     display: flex;
@@ -460,11 +615,25 @@
     /* border-radius: 20px; */
   }
 
+  .epi_foreground2 {
+    padding: 20px;
+    max-width:300px;
+    background-color: #0068B3;
+    color: #FFFD02;
+    /* border-radius: 20px; */
+  }
+
   .image_container {
     display: flex;
     justify-content: start;
     align-items: center;
     height: 600px;
+  }
+
+  .background_container{
+    display: flex;
+    justify-content: start;
+    padding-left: 50px;
   }
 
   .d1 {
